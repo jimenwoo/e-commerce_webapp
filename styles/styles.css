@@ -1,0 +1,121 @@
+html {
+    font-size: 16px; 
+    @media screen and (min-width: 900px) {
+      font-size: 18px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 20px;
+    }
+  }
+  
+h1{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.logo {
+    font-family: Cinzel;
+    font-size: 3rem;
+}
+header{
+    width: 100%;
+}
+
+main {
+    width: inherit;
+    border: .15rem solid red;
+    display: block;
+}
+
+
+
+nav{
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    border: .15rem solid blue;
+
+}
+
+
+
+#main_container{
+    display: flex;
+    width: 97%;
+    justify-content: center;
+    border: 3px solid green;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header_middle_bar{
+    border: .15rem solid rgb(175, 3, 255);
+    text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.header_middle_bar img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.nav-link{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.filter_menu{
+    border: .15rem solid #1C6EA4;
+    height: 55rem;
+    width: 15rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.filter_options{
+    border: 1px solid rgba(0,0,0,.125);
+    margin-top: .75rem;
+}
+
+
+form .filter_radio{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter_heading{
+    background-color: #fafafa;
+    border: 1px solid rgba(0,0,0,.125); 
+    padding: .25rem;
+}
+
+
+.merchandise_view{
+    font-size: inherit;
+    border: .15rem solid rgb(0, 247, 255);
+    width: 100rem;
+    height: inherit;
+
+}
+.products_view{
+    display: flex;
+    flex-wrap: wrap;
+    height: inherit;
+}
+
+.card{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+}
+
+.block {
+    display: block;
+ }
+

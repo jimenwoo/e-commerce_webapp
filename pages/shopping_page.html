@@ -1,0 +1,150 @@
+<html>   
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel = "stylesheet" type="text/css" href = "../styles/styles.css">
+    </head>
+    <header>
+    <div class = "header_middle_bar">
+        <h1 class = "logo"> JIMBO SPORTS APPAREL </h1>
+    </div>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="../pages/landing_page.html">Active</a>
+             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../pages/shopping_page.html">Link</a>
+             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+        </ul>
+
+    </header>
+    <body>
+        <main>
+            <h1>This is the body</h1> 
+            <div id = "main_container">
+                <section class = "filter_menu">
+                    <button id = "btn"> Button </button>
+                    <h1> Product Filter</h1>
+                    <div class = "filter_options">
+                        <div class = "filter_heading"> 
+                        <h1> Brand</h1>
+                        </div>
+                        <div class="filter_radio">
+                        <label class="block">
+                            <input type="checkbox" class="radgroup" value ="Nike" name = "Nike"> Nike </label>
+                        <label class="block">
+                            <input type="checkbox" class="radgroup"  value = "Adidas" name = "Adidas"> Adidas </label>
+                        <label class="block">
+                            <input type="checkbox" class="radgroup" value ="Polo Ralph Lauren" name = "Polo Ralph Lauren"> Polo Ralph Lauren </label>
+                        <label class="block">
+                            <input type="checkbox" class="radgroup" value ="Skechers" name = "Skechers"> Skechers </label>
+                        </div>
+                    </div>
+                    <div class = "filter_options"> 
+                        <div class = "filter_heading"> 
+                        <h1> Category</h1>
+                        </div>
+                        <div class="filter_radio">
+                            <label class="block">
+                                <input type="checkbox" name="radgroup2" value="A"> T-Shirt</label>
+                            <label class="block">
+                                <input type="checkbox" name="radgroup2" value="B"> Sweats</label>
+                             <label class="block">
+                                <input type="checkbox" name="radgroup2" value="C"> Sweat Pants</label>
+                            <label class="block">
+                                <input type="checkbox" name="radgroup2" value="D"> Hats</label>
+                            <label class="block">
+                                <input type="checkbox" name="radgroup2" value="D"> Socks</label>
+                            <label class="block">
+                                <input type="checkbox" name="radgroup2" value="D"> Jackets</label>
+                        </div>
+                    </div>
+                    <div class = "filter_options"> 
+                            <div class = "filter_heading"> 
+                            <h1> Color</h1>
+                            </div>
+                            <div class="filter_radio">
+                                <label class="block">
+                                    <input type="checkbox" name="radgroup3" value="A"> Black</label>
+                                <label class="block">
+                                    <input type="checkbox" name="radgroup3" value="B"> White</label>
+                                 <label class="block">
+                                    <input type="checkbox" name="radgroup3" value="C"> Gray</label>
+                                <label class="block">
+                                    <input type="checkbox" name="radgroup3" value="D"> Red</label>
+                                <label class="block">
+                                    <input type="checkbox" name="radgroup3" value="D"> Blue</label>
+                            </div>
+                        </div>
+                    <div class = "filter_options">
+                            <div class = "filter_heading"> 
+                            <h1> Price</h1>
+                            </div>
+                            <div class="filter_radio">
+                                <label class="block">
+                                    <input type="checkbox" name="radgroup4" value="A"> $1 - $50 </label>
+                                <label class="block">
+                                    <input type="checkbox" name="radgroup4" value="B"> $50 - $100 </label>
+                                <label class="block">
+                                    <input type="checkbox" name="radgroup4" value="C"> $100+ </label>
+                             </div>
+                        </div>
+                </section>
+                    
+                <section class = "merchandise_view">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Price: Low to High </a>
+                                    <a class="dropdown-item" href="#">Price: High to Low</a>
+                                </div>
+                            </li>
+                        </ul>
+                    <div class = "products_view">
+                        <div class="card" name = "nike" style="width: 18rem;">
+                            <img class="card-img-top" src="../images/nike-tech-fleece-gray.webp" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card" name = "nike" style="width: 18rem;">
+                                <img class="card-img-top" src="https://i.ebayimg.com/images/g/SZwAAOSwcWtbw5j1/s-l300.jpg" alt="">
+                                <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                    </div>                        
+                 </section>
+
+            </div>
+            
+        </main>
+    
+        <script src="../scripts/main.js"> </script> 
+    </body>
+
+    <footer>
+       <h1> This is a Footer </h1> 
+    </footer>
+        <script src="../scripts/main.js"> </script> 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
