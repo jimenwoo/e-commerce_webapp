@@ -1,6 +1,6 @@
 <html>   
     <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel = "stylesheet" href= "../bootstrap-4.3.1-dist/css/bootstrap.css">
         <link rel = "stylesheet" type="text/css" href = "../styles/styles.css">
     </head>
     <header>
@@ -42,13 +42,13 @@
                         </div>
                         <div class="filter_radio">
                         <label class="block">
-                            <input type="checkbox" class="radgroup" value ="Nike" name = "Nike"> Nike </label>
+                            <input type="checkbox" id="nike_check" onclick = "handleClick(this)" value ="nike" name = "nike"> Nike </label>
                         <label class="block">
-                            <input type="checkbox" class="radgroup"  value = "Adidas" name = "Adidas"> Adidas </label>
+                            <input type="checkbox" id="adidas_check" onclick = "handleClick(this)"  value = "adidas" name = "adidas"> Adidas </label>
                         <label class="block">
-                            <input type="checkbox" class="radgroup" value ="Polo Ralph Lauren" name = "Polo Ralph Lauren"> Polo Ralph Lauren </label>
+                            <input type="checkbox" id="polo_ralph_lauren_check" onclick = "handleClick(this)"  value ="polo_ralph_lauren" name = "Polo Ralph Lauren"> Polo Ralph Lauren </label>
                         <label class="block">
-                            <input type="checkbox" class="radgroup" value ="Skechers" name = "Skechers"> Skechers </label>
+                            <input type="checkbox" id="lacoste_check" onclick = "handleClick(this)" value ="lacoste" name = "lacoste"> Lacoste </label>
                         </div>
                     </div>
                     <div class = "filter_options"> 
@@ -105,7 +105,8 @@
                 <section class = "merchandise_view">
                         <ul class="nav nav-pills">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By</a>
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" 
+                                href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#">Price: Low to High </a>
                                     <a class="dropdown-item" href="#">Price: High to Low</a>
@@ -114,7 +115,17 @@
                         </ul>
                     <div class = "products_view">
                         <div class="card" name = "nike" style="width: 18rem;">
-                            <img class="card-img-top" src="../images/nike-tech-fleece-gray.webp" alt="">
+                            <img class="card-img-top" 
+                            src="../images/nike_tech_fleece_windrunner_barley-grey.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Nike Tech Fleece Windrunner</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card" name = "nike" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/nike_tech_fleece_jogger_barley-grey.jpg" alt="">
                             <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -122,13 +133,100 @@
                         </div>
 
                         <div class="card" name = "nike" style="width: 18rem;">
-                                <img class="card-img-top" src="https://i.ebayimg.com/images/g/SZwAAOSwcWtbw5j1/s-l300.jpg" alt="">
-                                <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
+                            <img class="card-img-top" 
+                            src="../images/nike_tech_fleece_windrunner_black.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
+                        </div> 
+
+                        <div class="card" name = "nike" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/nike_tech_fleece_jogger_black.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card" name = "nike" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/nike_tech_fleece_windrunner_heather-grey.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card" name = "nike" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/nike_tech_fleece_jogger_heather-grey.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card" name = "adidas" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/adidas_track_jacket_black.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card" name = "adidas" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/adidas_track_pants_black.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>    
+
+                        <div class="card" name = "adidas" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/adidas_track_jacket_red.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card" name = "adidas" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/adidas_track_pants_red.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>                         
+                        </div>
+                        <div class="card" name = "adidas" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/adidas_3_stripe_hoody_baby-blue.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>                         
+                        </div>
+                        <div class="card" name = "lacoste" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/lacoste_sweatshirt_blue.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>                         
+                        </div>
+                        <div class="card" name = "polo_ralph_lauren" style="width: 18rem;">
+                            <img class="card-img-top" 
+                            src="../images/polo_ralph_lauren_t_shirt_blue.jpg" alt="">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>                         
+                        </div>
                     </div>                        
                  </section>
 
@@ -143,8 +241,6 @@
        <h1> This is a Footer </h1> 
     </footer>
         <script src="../scripts/main.js"> </script> 
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src='../bootstrap-4.3.1-dist/jquery-3.4.1.min.js'></script>
+        <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </html>
