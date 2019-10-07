@@ -1,44 +1,85 @@
-var filterArr = [];
-var static = ['nike', 'adidas', 'polo_ralph_lauren', 'skechers', 'lacoste']
+let topBar = document.querySelectorAll('.top_bar')
+let navBar = document.querySelectorAll('header')
+let footer = document.querySelectorAll('footer')
 
 
-function handleClick(event){
-    if(event.checked){
-        filterHandler(event.value, true)
-    }
-    else {
-        filterHandler(event.value, false)
-    }
+for (i = 0; i < topBar.length; i++){
+    topBar[i].innerHTML = 
+        '<div class ="top_bar">' +
+        '<ul class = "top_bar_content">'+
+            '<li class ="sign_up_button"> Sign In | Register </li>'+
+            '<li class ="sign_up_button"> Customer Service </li>'+
+            '<li class ="sign_up_button">'  +
+                '<img class = "currency_flag" src = "../images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>'+
+            '</ul>'+
+        '</div>'     
 }
 
-function filterHandler(o, bool){
-    if(bool == true){
-        filterArr.push(o) 
-    }
-    else{
-        filterArr.splice(filterArr.indexOf(o), 1)
-    }
-    filtering()
-    }
+for (i = 0; i < navBar.length; i++){
+    navBar[i].innerHTML = 
+       ' <div class = "nav_bar">' + 
+            '<div class = "nav_items">' +
+                    '<ul class="nav justify-content-center">' +
+                        '<li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="../pages/home_page.html">Home</a></li>' +
+                        '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/shopping_page.html">Shop</a></li>' +
+                        '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/landing_page.html">Link</a></li> '      +    
+                    '</ul> '+
+            '</div>'+
+            ' <div class = "nav_title">' +
+            '<h1 class = "title_nav" style= "font-size: 64px; color: #4c4c4b">Brooklyn Apparel</h1>'+
+            '</div>'+
+            '<div class = "nav_shopping_cart">' +
+                '<img class = "shopping_cart" src ="../images/social_media_icons/sc.png" height="42" width="42">'+
+            '</div>'+
+        '</div>'
+}
 
-function filtering(){
-    //Block Displayer
-    filterArr.forEach(e => {         
-        let productFetch = document.querySelectorAll("div.card[name = '" + e + "']")
-        for (i = 0; i < productFetch.length; i++ ){
-            productFetch[i].style.display = 'block'
-        }
-      })
 
-    //Makes items style display none for items that are not selected
-    let arr = [];
-    arr = static.filter(function(item){
-        return !filterArr.includes(item)
-    })
-    arr.forEach(e => {         
-      let productFetch = document.querySelectorAll("div.card[name = '" + e + "']")
-      for (i = 0; i < productFetch.length; i++ ){
-          productFetch[i].style.display = 'none'
-      }
-    })
+for (i = 0; i < footer.length; i++){
+    footer[i].innerHTML =
+    '<div class = "footer_container">' + 
+            '<div class = "email_social_container">' +
+                '<div class = "content_container">' + 
+               ' <div class = "about_footer"> '+
+                   ' <ul class = "about_footer_section"> ' + 
+                        '<h4 style="color:#4c4c4b"> About </h4>'+
+                        '<li> Careers </li>'+
+                        '<li> Stores </li>'+
+                        '<li> Manufacturing Process </li>'+
+                        '<li> International </li>'+
+                        '<li> Accessibility </li>'+
+                   ' </ul> '+
+                '</div>' + 
+                ' <div class = "locations_footer"> '+
+                   ' <ul class = "locations_footer_section"> ' + 
+                        '<h4 style="color:#4c4c4b" > Locations </h4>'+
+                        '<li> Hong Kong </li>'+
+                        '<li> Brooklyn </li>'+
+                        '<li> San Francisco </li>'+
+                        '<li> San Jose </li>'+
+                        '<li> Seattle </li>'+
+                   ' </ul> '+
+                '</div>' + 
+                ' <div class = "contact_footer"> '+
+                   ' <ul class = "contact_footer_section"> ' + 
+                        '<h4 style="color:#4c4c4b"> Contact Us </h4>'+
+                        '<li> +1 (111) 111-1111 </li>'+
+                        '<li> info@brooklyn.com </li>'+
+                   ' </ul> '+
+                '</div>' + 
+                '</div>' + 
+                '<div class = "email_component">'+
+                   ' <h3> Sign Up to Our Mailing List </h3>' + 
+                   ' Sign up to receive Brooklyn Apparel emails on new releases, sales and exclusive content!'+
+                    '<div class = "email_button">'+
+                          '  <input class = "email_text" name ="email" type = "email" placeholder="Enter your email address">' +
+                           ' <button class = "email_submit_button" type= "submit"> Join </button> '+
+                    '</div>' +
+              '  </div> ' +
+            '</div>' + 
+            '<div class = "footer_bot">'+
+                '<h2> Brooklyn Apparel</h2>'+
+                '<p> High Quality Apparel for Less</p>'+
+            '</div>'+
+        '</div>'
 }

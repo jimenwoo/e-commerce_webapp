@@ -1,96 +1,50 @@
 <html>   
     <head>
-        <link rel = "stylesheet" href= "../bootstrap-4.3.1-dist/css/bootstrap.css">
         <link rel = "stylesheet" type="text/css" href = "../styles/styles.css">
-    </head>
-    <header>
-    <div class = "header_middle_bar">
-        <h1 class = "logo"> JIMBO SPORTS APPAREL </h1>
-    </div>
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" href="../pages/landing_page.html">Active</a>
-             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../pages/shopping_page.html">Link</a>
-             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
-                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-        </ul>
+        <link rel = "stylesheet" type="text/css" href = "../styles/format.css">
+        <link rel = "stylesheet" href= "../bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css?family=Cantora+One&display=swap" rel="stylesheet">
 
-    </header>
+
+    </head>
+    <div class = "top_bar"></div>
+    <header>   </header>
     <body>
         <main>
-            <h1>This is the body</h1> 
             <div id = "main_container">
                 <section class = "filter_menu">
-                    <button id = "btn"> Button </button>
                     <h1> Product Filter</h1>
                     <div class = "filter_options">
                         <div class = "filter_heading"> 
                         <h1> Brand</h1>
-                        </div>
                         <div class="filter_radio">
                         <label class="block">
-                            <input type="checkbox" id="nike_check" onclick = "handleClick(this)" value ="nike" name = "nike"> Nike </label>
+                            <input type="checkbox" id="nike_check" onclick = "handleClick(this)"  name = "nike"> Nike </label>
                         <label class="block">
-                            <input type="checkbox" id="adidas_check" onclick = "handleClick(this)"  value = "adidas" name = "adidas"> Adidas </label>
+                            <input type="checkbox" id="adidas_check" onclick = "handleClick(this)"  name = "adidas"> Adidas </label>
                         <label class="block">
-                            <input type="checkbox" id="polo_ralph_lauren_check" onclick = "handleClick(this)"  value ="polo_ralph_lauren" name = "Polo Ralph Lauren"> Polo Ralph Lauren </label>
+                            <input type="checkbox" id="polo_ralph_lauren_check" onclick = "handleClick(this)"  name = "polo_ralph_lauren"> Polo Ralph Lauren </label>
                         <label class="block">
-                            <input type="checkbox" id="lacoste_check" onclick = "handleClick(this)" value ="lacoste" name = "lacoste"> Lacoste </label>
-                        </div>
-                    </div>
-                    <div class = "filter_options"> 
-                        <div class = "filter_heading"> 
-                        <h1> Category</h1>
-                        </div>
-                        <div class="filter_radio">
-                            <label class="block">
-                                <input type="checkbox" name="radgroup2" value="A"> T-Shirt</label>
-                            <label class="block">
-                                <input type="checkbox" name="radgroup2" value="B"> Sweats</label>
-                             <label class="block">
-                                <input type="checkbox" name="radgroup2" value="C"> Sweat Pants</label>
-                            <label class="block">
-                                <input type="checkbox" name="radgroup2" value="D"> Hats</label>
-                            <label class="block">
-                                <input type="checkbox" name="radgroup2" value="D"> Socks</label>
-                            <label class="block">
-                                <input type="checkbox" name="radgroup2" value="D"> Jackets</label>
+                            <input type="checkbox" id="lacoste_check" onclick = "handleClick(this)" name = "lacoste"> Lacoste </label>
                         </div>
                     </div>
                     <div class = "filter_options"> 
                             <div class = "filter_heading"> 
                             <h1> Color</h1>
-                            </div>
                             <div class="filter_radio">
                                 <label class="block">
-                                    <input type="checkbox" name="radgroup3" value="A"> Black</label>
-                                <label class="block">
-                                    <input type="checkbox" name="radgroup3" value="B"> White</label>
+                                    <input type="checkbox" onclick = "handleColor(this)" name="black"> Black</label>
                                  <label class="block">
-                                    <input type="checkbox" name="radgroup3" value="C"> Gray</label>
+                                    <input type="checkbox" onclick = "handleColor(this)" name="grey"> Grey</label>
                                 <label class="block">
-                                    <input type="checkbox" name="radgroup3" value="D"> Red</label>
+                                    <input type="checkbox" onclick = "handleColor(this)" name="red"> Red</label>
                                 <label class="block">
-                                    <input type="checkbox" name="radgroup3" value="D"> Blue</label>
+                                    <input type="checkbox" onclick = "handleColor(this)" name="blue"> Blue</label>
                             </div>
                         </div>
                     <div class = "filter_options">
                             <div class = "filter_heading"> 
                             <h1> Price</h1>
-                            </div>
                             <div class="filter_radio">
                                 <label class="block">
                                     <input type="checkbox" name="radgroup4" value="A"> $1 - $50 </label>
@@ -103,130 +57,157 @@
                 </section>
                     
                 <section class = "merchandise_view">
-                        <ul class="nav nav-pills">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" 
-                                href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort By</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Price: Low to High </a>
-                                    <a class="dropdown-item" href="#">Price: High to Low</a>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sort By
+                            </button>
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" onclick = "handleSortClick(this)" type="button">Price: Low to High</button>
+                                <button class="dropdown-item" onclick = "handleSortClick(this)" type="button">Price: High to Low</button>
+                            </div>
+                        </div>
                     <div class = "products_view">
-                        <div class="card" name = "nike" style="width: 18rem;">
+                        <div class = "products_container">
+                        <div class="product_card" name = "nike" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/nike_tech_fleece_windrunner_barley-grey.jpg" alt="">
+                            src="../images/products/nike_tech_fleece_windrunner_barley-grey.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Nike Tech Fleece Windrunner</h5>
+                            <h6 class="card-title">Nike Tech Fleece Windrunner</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "grey" >Grey</h6>
+                            <h6 class="card-subtitle mb-3" value = "130" >$130</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
 
-                        <div class="card" name = "nike" style="width: 18rem;">
+                        <div class="product_card" name = "nike" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/nike_tech_fleece_jogger_barley-grey.jpg" alt="">
+                            src="../images/products/nike_tech_fleece_jogger_barley-grey.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Nike Tech Fleece Jogger</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "grey">Grey</h6>
+                            <h6 class="card-subtitle mb-3" value = "100">$100</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
 
-                        <div class="card" name = "nike" style="width: 18rem;">
+                        <div class="product_card" name = "nike" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/nike_tech_fleece_windrunner_black.jpg" alt="">
+                            src="../images/products/nike_tech_fleece_windrunner_black.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Nike Tech Fleece Windrunner</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "black">Black</h6>
+                            <h6 class="card-subtitle mb-3" value = "130" >$130</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div> 
 
-                        <div class="card" name = "nike" style="width: 18rem;">
+                        <div class="product_card" name = "nike" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/nike_tech_fleece_jogger_black.jpg" alt="">
+                            src="../images/products/nike_tech_fleece_jogger_black.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Nike Tech Fleece Jogger</h5>                         
+                            <h6 class="card-subtitle mb-2 text-muted"value = "black" >Black</h6>
+                            <h6 class="card-subtitle mb-3" value = "100">$100</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
 
-                        <div class="card" name = "nike" style="width: 18rem;">
+                        <div class="product_card" name = "nike" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/nike_tech_fleece_windrunner_heather-grey.jpg" alt="">
+                            src="../images/products/nike_tech_fleece_windrunner_heather-grey.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Nike Tech Fleece Windrunner</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "grey" >Grey</h6>
+                            <h6 class="card-subtitle mb-3" value = "130" >$130</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
 
-                        <div class="card" name = "nike" style="width: 18rem;">
+                        <div class="product_card" name = "nike" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/nike_tech_fleece_jogger_heather-grey.jpg" alt="">
+                            src="../images/products/nike_tech_fleece_jogger_heather-grey.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Nike Tech Fleece Jogger</h5>                           
+                            <h6 class="card-subtitle mb-2 text-muted" value = "grey" >Grey</h6>
+                            <h6 class="card-subtitle mb-3" value = "100" >$100</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
 
-                        <div class="card" name = "adidas" style="width: 18rem;">
+                        <div class="product_card" name = "adidas" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/adidas_track_jacket_black.jpg" alt="">
+                            src="../images/products/adidas_track_jacket_black.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Adidas Track Jack</h5>                            
+                            <h6 class="card-subtitle mb-2 text-muted" value = "black">Black</h6>
+                            <h6 class="card-subtitle mb-3" value = "60" >$60</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
 
-                        <div class="card" name = "adidas" style="width: 18rem;">
+                        <div class="product_card" name = "adidas" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/adidas_track_pants_black.jpg" alt="">
+                            src="../images/products/adidas_track_pants_black.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Adidas Track Pants</h5>                           
+                            <h6 class="card-subtitle mb-2 text-muted" value = "black">Black</h6>
+                            <h6 class="card-subtitle mb-3" value = "40" >$40</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>    
 
-                        <div class="card" name = "adidas" style="width: 18rem;">
+                        <div class="product_card" name = "adidas" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/adidas_track_jacket_red.jpg" alt="">
+                            src="../images/products/adidas_track_jacket_red.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Adidas Track Jacket</h5>                            
+                            <h6 class="card-subtitle mb-2 text-muted" value = "red">Red</h6>
+                            <h6 class="card-subtitle mb-3" value = "60" >$60</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
 
-                        <div class="card" name = "adidas" style="width: 18rem;">
+                        <div class="product_card" name = "adidas" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/adidas_track_pants_red.jpg" alt="">
+                            src="../images/products/adidas_track_pants_red.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Adidas Track Pants</h5>                           
+                            <h6 class="card-subtitle mb-2 text-muted" value = "red" >Red</h6>
+                            <h6 class="card-subtitle mb-3" value = "40">$40</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>                         
                         </div>
-                        <div class="card" name = "adidas" style="width: 18rem;">
+                        <div class="product_card" name = "adidas" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/adidas_3_stripe_hoody_baby-blue.jpg" alt="">
+                            src="../images/products/adidas_3_stripe_hoody_baby-blue.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Adidas 3-Stripe Hoody</h5>                            
+                            <h6 class="card-subtitle mb-2 text-muted" value = "blue" >Blue</h6>
+                            <h6 class="card-subtitle mb-3" value = "50" >$50</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>                         
                         </div>
-                        <div class="card" name = "lacoste" style="width: 18rem;">
+                        <div class="product_card" name = "lacoste" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/lacoste_sweatshirt_blue.jpg" alt="">
+                            src="../images/products/lacoste_sweatshirt_blue.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Lacoste Crew Sweatshirt</h5> 
+                            <h6 class="card-subtitle mb-2 text-muted" value = "blue" >Blue</h6>
+                            <h6 class="card-subtitle mb-3" value = "60" >$60</h6>          
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>                         
                         </div>
-                        <div class="card" name = "polo_ralph_lauren" style="width: 18rem;">
+                        <div class="product_card" name = "polo_ralph_lauren" style="width: 18rem;">
                             <img class="card-img-top" 
-                            src="../images/polo_ralph_lauren_t_shirt_blue.jpg" alt="">
+                            src="../images/products/polo_ralph_lauren_t_shirt_blue.jpg" alt="">
                             <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-title">Polo Ralph Lauren T-Shirt</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "blue" >Blue</h6>
+                            <h6 class="card-subtitle mb-3" value = "30" >$30</h6>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>                         
                         </div>
+                    </div>
                     </div>                        
                  </section>
 
@@ -234,13 +215,12 @@
             
         </main>
     
-        <script src="../scripts/main.js"> </script> 
     </body>
 
-    <footer>
-       <h1> This is a Footer </h1> 
-    </footer>
+    <footer></footer>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="../scripts/main.js"> </script> 
-        <script src='../bootstrap-4.3.1-dist/jquery-3.4.1.min.js'></script>
+        <script src="../scripts/filtering_options.js"> </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </html>
