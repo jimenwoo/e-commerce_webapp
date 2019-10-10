@@ -9,10 +9,9 @@ header{
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin-top: .25rem;
+    padding-top: .25rem;
     height: 2rem;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);  
-    background-color: rgb(250, 250, 250);
+    background-color: #f2f2f2;
 
 }
 
@@ -83,6 +82,7 @@ footer{
 
 .email_component{
     text-align: end;
+    padding-bottom: 2rem;
 }
 
 .content_container{
@@ -134,9 +134,21 @@ footer{
     text-align: center;
 }
 .footer_container{
-    max-width: 1800px;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     list-style: none;
 
+}
+
+.social_icons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top : 1rem;
+}
+
+.social_icons li{
+    margin-right: 1rem;
 }

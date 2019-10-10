@@ -74,6 +74,14 @@ for (i = 0; i < footer.length; i++){
                     '<div class = "email_button">'+
                           '  <input class = "email_text" name ="email" type = "email" placeholder="Enter your email address">' +
                            ' <button class = "email_submit_button" type= "submit"> Join </button> '+
+                            '<div class = "social_icons"> '+
+                            '<li> <img src = "../images/social_media_icons/ig.png" height="42px" width = "42px" </li>' + 
+                            '<li> <img src = "../images/social_media_icons/fb.png" height="42px" width = "42px" </li>' +
+                            '<li> <img src = "../images/social_media_icons/pt.png" height="42px" width = "42px" </li>' +
+                            '<li> <img src = "../images/social_media_icons/sc.png" height="42px" width = "42px" </li>' +
+                            '<li> <img src = "../images/social_media_icons/tw.png" height="42px" width = "42px" </li>' +
+                            '<li> <img src = "../images/social_media_icons/yt.png" height="42px" width = "42px" </li>' +
+                            '</div>' + 
                     '</div>' +
               '  </div> ' +
             '</div>' + 
