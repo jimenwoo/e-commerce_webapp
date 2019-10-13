@@ -1,7 +1,6 @@
 var filterArr = [];
 var colorArr = [];
-var brands = ['nike', 'adidas', 'polo_ralph_lauren', 'skechers', 'lacoste']
-var colors = ['black', 'white', 'grey', 'red', 'blue']
+var colors = ['black', 'white', 'gray', 'red', 'blue', 'khaki']
 
 
 let handleClick = (e) => {
@@ -24,7 +23,7 @@ let filterHandler = (o, bool) => {
 }
 let filtering = () => {
     if (filterArr.length == 0){
-        let productFetch = document.querySelectorAll("div.product_card")
+        let productFetch = document.querySelectorAll("a.product_card")
         for (i = 0; i < productFetch.length; i++ ){
             productFetch[i].style.display = 'block'
         }
@@ -32,7 +31,7 @@ let filtering = () => {
     else{
         //Block Displayer
         filterArr.forEach(e => {         
-            let productFetch = document.querySelectorAll("div.product_card[name = '" + e + "']")
+            let productFetch = document.querySelectorAll("a.product_card[name = '" + e + "']")
             for (i = 0; i < productFetch.length; i++ ){
                 productFetch[i].style.display = 'block'
             }
@@ -43,7 +42,7 @@ let filtering = () => {
             return !filterArr.includes(item)
         })
         arr.forEach(e => {         
-        let productFetch = document.querySelectorAll("div.product_card[name = '" + e + "']")
+        let productFetch = document.querySelectorAll("a.product_card[name = '" + e + "']")
         for (i = 0; i < productFetch.length; i++ ){
             productFetch[i].style.display = 'none'
         }
@@ -54,18 +53,18 @@ let filtering = () => {
 
 let handleColor = (e) => {
     if(e.checked){
-        colorFilter(e.name, true)
+        colorFilter(e.value, true)
     }
-    else{
-        colorFilter(e.name, false)
+    else if (!e.checked){
+        colorFilter(e.value, false)
     }
 }
 let colorFilter = (o, bool) => {
-    if(bool == true){
+    if(bool){
         colorArr.push(o) 
     }
     else{
-        colorArr.splice(filterArr.indexOf(o), 1)
+        colorArr.splice(colorArr.indexOf(o), 1)
     }
     filterColor();
     
@@ -73,14 +72,14 @@ let colorFilter = (o, bool) => {
 
 let filterColor = () => {
     if (colorArr.length == 0){
-        let productFetch = document.querySelectorAll("div.product_card")
+        let productFetch = document.querySelectorAll("a.product_card")
         for (i = 0; i < productFetch.length; i++ ){
             productFetch[i].style.display = 'block'
         }
     }
     else{
         colorArr.forEach(e => {         
-            let productFetch = document.querySelectorAll("div.product_card h6.card-subtitle.mb-2[value = '" + e + "']")       
+            let productFetch = document.querySelectorAll("a.product_card h6.card-subtitle.mb-2[value = '" + e + "']")       
             for (i = 0; i < productFetch.length; i++ ){
                 (productFetch[i].parentNode).parentNode.style.display = 'block'
             }
@@ -90,9 +89,8 @@ let filterColor = () => {
             return !colorArr.includes(item)
         })
         arr.forEach(e => {         
-        let productFetch = document.querySelectorAll("div.product_card h6.card-subtitle.mb-2[value = '" + e + "']")       
+        let productFetch = document.querySelectorAll("a.product_card h6.card-subtitle.mb-2[value = '" + e + "']")       
         for (i = 0; i < productFetch.length; i++ ){
-            console.log((productFetch[i].parentNode).parentNode)
             if((productFetch[i].parentNode).parentNode)
             (productFetch[i].parentNode).parentNode.style.display = 'none'
         }

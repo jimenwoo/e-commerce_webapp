@@ -10,7 +10,7 @@ for (i = 0; i < topBar.length; i++){
             '<li class ="sign_up_button"> Sign In | Register </li>'+
             '<li class ="sign_up_button"> Customer Service </li>'+
             '<li class ="sign_up_button">'  +
-                '<img class = "currency_flag" src = "../images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>'+
+                '<img class = "currency_flag" src = "../../images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>'+
             '</ul>'+
         '</div>'     
 }
@@ -20,16 +20,16 @@ for (i = 0; i < navBar.length; i++){
        ' <div class = "nav_bar">' + 
             '<div class = "nav_items">' +
                     '<ul class="nav justify-content-center">' +
-                        '<li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="../pages/home_page.html">Home</a></li>' +
-                        '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/shopping_page.html">Shop</a></li>' +
-                        '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/landing_page.html">Locations</a></li> '      +    
+                        '<li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="../home_page.html">Home</a></li>' +
+                        '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../shopping_page.html">Shop</a></li>' +
+                        '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../landing_page.html">Locations</a></li> '      +    
                     '</ul> '+
             '</div>'+
             ' <div class = "nav_title">' +
-            '<image class = "logo" src = "../images/background/logo.png"></img>' + 
+            '<image class = "logo" src = "../../images/background/logo.png"></img>' + 
             '</div>'+
             '<div class = "nav_shopping_cart">' +
-                '<img class = "shopping_cart" src ="../images/social_media_icons/sc.png" height="42" width="42">'+
+                '<img class = "shopping_cart" src ="../../images/social_media_icons/sc.png" height="42" width="42">'+
             '</div>'+
         '</div>'
 }
@@ -75,18 +75,18 @@ for (i = 0; i < footer.length; i++){
                           '  <input class = "email_text" name ="email" type = "email" placeholder="Enter your email address">' +
                            ' <button class = "email_submit_button" type= "submit"> Join </button> '+
                             '<div class = "social_icons"> '+
-                            '<li> <img src = "../images/social_media_icons/ig.png" height="42px" width = "42px" </li>' + 
-                            '<li> <img src = "../images/social_media_icons/fb.png" height="42px" width = "42px" </li>' +
-                            '<li> <img src = "../images/social_media_icons/pt.png" height="42px" width = "42px" </li>' +
-                            '<li> <img src = "../images/social_media_icons/sc.png" height="42px" width = "42px" </li>' +
-                            '<li> <img src = "../images/social_media_icons/tw.png" height="42px" width = "42px" </li>' +
-                            '<li> <img src = "../images/social_media_icons/yt.png" height="42px" width = "42px" </li>' +
+                            '<li> <img src = "../../images/social_media_icons/ig.png" height="42px" width = "42px" </li>' + 
+                            '<li> <img src = "../../images/social_media_icons/fb.png" height="42px" width = "42px" </li>' +
+                            '<li> <img src = "../../images/social_media_icons/pt.png" height="42px" width = "42px" </li>' +
+                            '<li> <img src = "../../images/social_media_icons/sc.png" height="42px" width = "42px" </li>' +
+                            '<li> <img src = "../../images/social_media_icons/tw.png" height="42px" width = "42px" </li>' +
+                            '<li> <img src = "../../images/social_media_icons/yt.png" height="42px" width = "42px" </li>' +
                             '</div>' + 
                     '</div>' +
               '  </div> ' +
             '</div>' + 
             '<div class = "footer_bot">'+
-                '<image class = "logo" style = "max-width: 75px; max-height: 75px" src = "../images/background/logo2.png"></img>' + 
+                '<image class = "logo" style = "max-width: 75px; max-height: 75px" src = "../../images/background/logo2.png"></img>' + 
                 '<h2> Brooklyn Apparel</h2>'+
                 '<p> High Quality Apparel for Less</p>'+
             '</div>'+

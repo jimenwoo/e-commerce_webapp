@@ -26,7 +26,7 @@ header{
 }
 
 .nav_items {
-    width: 10%;
+    width: 20%;
     margin-left: 1rem;
     display: flex;
     align-items: center;
@@ -36,12 +36,13 @@ header{
     margin-right: auto;
 }
 
-.title_nav{
-    text-align: center;
+.logo{
+    max-width: 450px;
+    max-height: 160px;
+    
 }
-
 .nav_shopping_cart{
-    width: 10%;
+    width: 20%;
     margin-right: 1rem;
     display: flex;
     align-items: center;

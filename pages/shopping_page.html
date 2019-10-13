@@ -1,8 +1,8 @@
 <html>   
     <head>
+        <link rel = "stylesheet" href= "../bootstrap-4.3.1-dist/css/bootstrap.css">
         <link rel = "stylesheet" type="text/css" href = "../styles/styles.css">
         <link rel = "stylesheet" type="text/css" href = "../styles/format.css">
-        <link rel = "stylesheet" href= "../bootstrap-4.3.1-dist/css/bootstrap.css">
         <link href="https://fonts.googleapis.com/css?family=Cantora+One&display=swap" rel="stylesheet">
 
 
@@ -14,45 +14,21 @@
             <div id = "main_container">
                 <section class = "filter_menu">
                     <h1> Product Filter</h1>
-                    <div class = "filter_options">
-                        <div class = "filter_heading"> 
-                        <h1> Brand</h1>
-                        <div class="filter_radio">
-                        <label class="block">
-                            <input type="checkbox" id="nike_check" onclick = "handleClick(this)"  name = "nike"> Nike </label>
-                        <label class="block">
-                            <input type="checkbox" id="adidas_check" onclick = "handleClick(this)"  name = "adidas"> Adidas </label>
-                        <label class="block">
-                            <input type="checkbox" id="polo_ralph_lauren_check" onclick = "handleClick(this)"  name = "polo_ralph_lauren"> Polo Ralph Lauren </label>
-                        <label class="block">
-                            <input type="checkbox" id="lacoste_check" onclick = "handleClick(this)" name = "lacoste"> Lacoste </label>
-                        </div>
-                    </div>
                     <div class = "filter_options"> 
                             <div class = "filter_heading"> 
                             <h1> Color</h1>
                             <div class="filter_radio">
                                 <label class="block">
-                                    <input type="checkbox" onclick = "handleColor(this)" name="black"> Black</label>
+                                    <input type="checkbox" onclick = "handleColor(this)" value = "black" name="radFilter"> Black</label>
                                  <label class="block">
-                                    <input type="checkbox" onclick = "handleColor(this)" name="grey"> Grey</label>
+                                    <input type="checkbox" onclick = "handleColor(this)" value = "gray" name="radFilter"> Gray</label>
                                 <label class="block">
-                                    <input type="checkbox" onclick = "handleColor(this)" name="red"> Red</label>
-                                <label class="block">
-                                    <input type="checkbox" onclick = "handleColor(this)" name="blue"> Blue</label>
+                                    <input type="checkbox" onclick = "handleColor(this)" value = "red" name="radFilter"> Red</label>
+                                <label>
+                                    <input type="checkbox" onclick = "handleColor(this)" value = "blue" name="radFilter"> Blue</label>
+                                 <label class="block">
+                                    <input type="checkbox" onclick = "handleColor(this)" value = "khaki" name="radFilter"> Khaki</label>
                             </div>
-                        </div>
-                    <div class = "filter_options">
-                            <div class = "filter_heading"> 
-                            <h1> Price</h1>
-                            <div class="filter_radio">
-                                <label class="block">
-                                    <input type="checkbox" name="radgroup4" value="A"> $1 - $50 </label>
-                                <label class="block">
-                                    <input type="checkbox" name="radgroup4" value="B"> $50 - $100 </label>
-                                <label class="block">
-                                    <input type="checkbox" name="radgroup4" value="C"> $100+ </label>
-                             </div>
                         </div>
                 </section>
                     
@@ -68,159 +44,191 @@
                         </div>
                     <div class = "products_view">
                         <div class = "products_container">
-                        <div class="product_card" name = "nike" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/nike_tech_fleece_windrunner_barley-grey.jpg" alt="">
+                            <a href="#" class = "product_card" onclick = "addToCart(this)">
+                                <img class="card-img-top" src="../images/products/black_tshirt.jpeg" alt="">
                             <div class="card-body">
-                            <h6 class="card-title">Nike Tech Fleece Windrunner</h5>
-                            <h6 class="card-subtitle mb-2 text-muted" value = "grey" >Grey</h6>
-                            <h6 class="card-subtitle mb-3" value = "130" >$130</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h6 class="card-title">Crewneck T Shirt</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "black" >Black</h6>
+                            <h6 class="card-subtitle mb-3" value = "30" >$30</h6>
                             </div>
-                        </div>
-
-                        <div class="product_card" name = "nike" style="width: 18rem;">
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
                             <img class="card-img-top" 
-                            src="../images/products/nike_tech_fleece_jogger_barley-grey.jpg" alt="">
+                            src="../images/products/gray_tshirt.jpeg" alt="">
                             <div class="card-body">
-                            <h6 class="card-title">Nike Tech Fleece Jogger</h5>
-                            <h6 class="card-subtitle mb-2 text-muted" value = "grey">Grey</h6>
-                            <h6 class="card-subtitle mb-3" value = "100">$100</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h6 class="card-title">Crewneck T Shirt</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "gray" >Gray</h6>
+                            <h6 class="card-subtitle mb-3" value = "30" >$30</h6>
                             </div>
-                        </div>
-
-                        <div class="product_card" name = "nike" style="width: 18rem;">
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
                             <img class="card-img-top" 
-                            src="../images/products/nike_tech_fleece_windrunner_black.jpg" alt="">
+                            src="../images/products/blue_tshirt.jpeg" alt="">
                             <div class="card-body">
-                            <h6 class="card-title">Nike Tech Fleece Windrunner</h5>
-                            <h6 class="card-subtitle mb-2 text-muted" value = "black">Black</h6>
-                            <h6 class="card-subtitle mb-3" value = "130" >$130</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div> 
-
-                        <div class="product_card" name = "nike" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/nike_tech_fleece_jogger_black.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Nike Tech Fleece Jogger</h5>                         
-                            <h6 class="card-subtitle mb-2 text-muted"value = "black" >Black</h6>
-                            <h6 class="card-subtitle mb-3" value = "100">$100</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div class="product_card" name = "nike" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/nike_tech_fleece_windrunner_heather-grey.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Nike Tech Fleece Windrunner</h5>
-                            <h6 class="card-subtitle mb-2 text-muted" value = "grey" >Grey</h6>
-                            <h6 class="card-subtitle mb-3" value = "130" >$130</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div class="product_card" name = "nike" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/nike_tech_fleece_jogger_heather-grey.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Nike Tech Fleece Jogger</h5>                           
-                            <h6 class="card-subtitle mb-2 text-muted" value = "grey" >Grey</h6>
-                            <h6 class="card-subtitle mb-3" value = "100" >$100</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div class="product_card" name = "adidas" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/adidas_track_jacket_black.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Adidas Track Jack</h5>                            
-                            <h6 class="card-subtitle mb-2 text-muted" value = "black">Black</h6>
-                            <h6 class="card-subtitle mb-3" value = "60" >$60</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div class="product_card" name = "adidas" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/adidas_track_pants_black.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Adidas Track Pants</h5>                           
-                            <h6 class="card-subtitle mb-2 text-muted" value = "black">Black</h6>
-                            <h6 class="card-subtitle mb-3" value = "40" >$40</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>    
-
-                        <div class="product_card" name = "adidas" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/adidas_track_jacket_red.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Adidas Track Jacket</h5>                            
-                            <h6 class="card-subtitle mb-2 text-muted" value = "red">Red</h6>
-                            <h6 class="card-subtitle mb-3" value = "60" >$60</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div class="product_card" name = "adidas" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/adidas_track_pants_red.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Adidas Track Pants</h5>                           
-                            <h6 class="card-subtitle mb-2 text-muted" value = "red" >Red</h6>
-                            <h6 class="card-subtitle mb-3" value = "40">$40</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>                         
-                        </div>
-                        <div class="product_card" name = "adidas" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/adidas_3_stripe_hoody_baby-blue.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Adidas 3-Stripe Hoody</h5>                            
-                            <h6 class="card-subtitle mb-2 text-muted" value = "blue" >Blue</h6>
-                            <h6 class="card-subtitle mb-3" value = "50" >$50</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>                         
-                        </div>
-                        <div class="product_card" name = "lacoste" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/lacoste_sweatshirt_blue.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Lacoste Crew Sweatshirt</h5> 
-                            <h6 class="card-subtitle mb-2 text-muted" value = "blue" >Blue</h6>
-                            <h6 class="card-subtitle mb-3" value = "60" >$60</h6>          
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>                         
-                        </div>
-                        <div class="product_card" name = "polo_ralph_lauren" style="width: 18rem;">
-                            <img class="card-img-top" 
-                            src="../images/products/polo_ralph_lauren_t_shirt_blue.jpg" alt="">
-                            <div class="card-body">
-                            <h6 class="card-title">Polo Ralph Lauren T-Shirt</h5>
+                            <h6 class="card-title">Crewneck T Shirt</h5>
                             <h6 class="card-subtitle mb-2 text-muted" value = "blue" >Blue</h6>
                             <h6 class="card-subtitle mb-3" value = "30" >$30</h6>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>                         
+                            </div>
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/white_tshirt.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Crewneck T Shirt</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "white" >White</h6>
+                            <h6 class="card-subtitle mb-3" value = "30" >$30</h6>
+                            </div>
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/black_vneck.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Slim-fit V-neck T Shirt</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "black" >Black</h6>
+                            <h6 class="card-subtitle mb-3" value = "25" >$25</h6>
+                            </div>
+                        </a>
+
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                                <img class="card-img-top" 
+                                src="../images/products/white_vneck.jpeg" alt="">
+                                <div class="card-body">
+                                <h6 class="card-title">Slim-fit V-neck T Shirt</h5>
+                                <h6 class="card-subtitle mb-2 text-muted" value = "white" >White</h6>
+                                <h6 class="card-subtitle mb-3" value = "25" >$25</h6>
+                                </div>
+                        </a>
+
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                                <img class="card-img-top" 
+                                src="../images/products/gray_vneck.jpeg" alt="">
+                                <div class="card-body">
+                                <h6 class="card-title">Slim-fit V-neck T Shirt</h5>
+                                <h6 class="card-subtitle mb-2 text-muted" value = "gray" >Heather Grey</h6>
+                                <h6 class="card-subtitle mb-3" value = "25" >$25</h6>
+                                </div>
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                                <img class="card-img-top" 
+                                src="../images/products/red_vneck.jpeg" alt="">
+                                <div class="card-body">
+                                <h6 class="card-title">Slim-fit V-neck T Shirt</h5>
+                                <h6 class="card-subtitle mb-2 text-muted" value = "red" >Red</h6>
+                                <h6 class="card-subtitle mb-3" value = "25" >$25</h6>
+                                </div>
+                        </a>
+
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                                <img class="card-img-top" 
+                                src="../images/products/gray_sweatshirt.jpeg" alt="">
+                                <div class="card-body">
+                                <h6 class="card-title">Crewneck Sweatshirt</h5>
+                                <h6 class="card-subtitle mb-2 text-muted" value = "gray" > Heather Grey</h6>
+                                <h6 class="card-subtitle mb-3" value = "40" >$40</h6>
+                                </div>
+                        </a>
+                
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                                <img class="card-img-top" 
+                                src="../images/products/gray_chinopant.jpeg" alt="">
+                                <div class="card-body">
+                                <h6 class="card-title">Slim-fit Chino Pant</h5>
+                                <h6 class="card-subtitle mb-2 text-muted" value = "gray" >Gray</h6>
+                                <h6 class="card-subtitle mb-3" value = "50" >$50</h6>
+                                </div>
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                                <img class="card-img-top" 
+                                src="../images/products/blue_chinopant.jpeg" alt="">
+                                <div class="card-body">
+                                <h6 class="card-title">Slim-fit Chino Pant</h5>
+                                <h6 class="card-subtitle mb-2 text-muted" value = "blue" > Navy Blue</h6>
+                                <h6 class="card-subtitle mb-3" value = "50" >$50</h6>
+                                </div>
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                                <img class="card-img-top" 
+                                src="../images/products/khaki_chinopant.jpeg" alt="">
+                                <div class="card-body">
+                                <h6 class="card-title">Straight-fit Chino Pant</h5>
+                                <h6 class="card-subtitle mb-2 text-muted" value = "khaki" > Khaki</h6>
+                                <h6 class="card-subtitle mb-3" value = "50" >$50</h6>
+                                </div>
+                        </a>
+
                         </div>
-                    </div>
                     </div>                        
                  </section>
 
             </div>
-            
+        
+        <!-- <div class = "product_modal"> -->
+
         </main>
+        <div id ="modal_content">
+            <div class ="modal_content_data">
+                <div class ="modal_content_picture">
+                    <img id = "modal_picture" src = "">
+                </div>
+
+                <div class = "right_modal">
+                    <button onclick = "closeModal()" type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <div class ="modal_content_details">
+                        <div class ="product_header"> 
+                            <div id ="product_title">
+                            <h2> Crewneck T Shirt</h2>
+                            <h4> $30.00 </h4> 
+                            <p> Black</p>
+                        </div>
+
+                        </div>
+                        <div class = "product_sizing">
+                            <div class = "sizing_container">
+                                <div class = "product_size"> <a  onclick = "sizeButton(this)" href= "#" > XS </a> </div>
+                                <div class = "product_size"> <a href= "#"> S </a> </div>
+                                <div class = "product_size"> <a href= "#"> M </a> </div>
+                                <div class = "product_size"> <a href= "#"> L </a> </div>
+                                <div class = "product_size"> <a href= "#"> XL </a> </div>
+                            </div>
+                        </div>
+                        <div class ="quantity_filter">
+                                <div class = "qty"> 
+                                    <h4> Quantity: </h4>
+                                </div>
+                                <div class = "qty_default">
+                                <select name="vals" id="quantity_val">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                </select>
+                                </div>   
+                        </div>
+                        <div class = "modal_button_container">
+                            <button type="button" class="btn btn-secondary btn-lg btn-block">Add to Cart</button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        <!-- </div> -->
+
+    </div>
     
     </body>
 
+    
     <footer></footer>
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="../scripts/main.js"> </script> 
         <script src="../scripts/filtering_options.js"> </script> 
+        <script src="../scripts/shopping.js"> </script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </html>
