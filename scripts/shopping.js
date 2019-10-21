@@ -163,10 +163,11 @@ let priceCalculator = () => {
 
  window.onload = () => {
     let cartQuantity = document.querySelector('.quantity_shopping_cart')
-    console.log(sessionStorage.length)
-    cartQuantity.innerHTML = sessionStorage.length
+    cartQuantity.innerHTML = cartQuantity.length
+    let cartQuantity2 = document.querySelector('.quantity_shopping_cart')
 
     for(var i = 0; i < sessionStorage.length; i++){
+        shoppingCartObj.push(JSON.parse(sessionStorage.getItem(i)))
         var newProduct = document.createElement('div')
         var product = JSON.parse(sessionStorage.getItem(i))
         newProduct.innerHTML = '<div class = "shopping_cart_product">'+
@@ -197,5 +198,6 @@ let priceCalculator = () => {
          let cartQuantity = document.querySelector('.quantity_shopping_cart')
          cartQuantity.innerHTML = shoppingCartObj.length
          shoppingCartContainer.appendChild(newProduct)
+         priceCalculator()
     }
 }
