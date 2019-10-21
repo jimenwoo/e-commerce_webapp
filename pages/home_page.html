@@ -11,6 +11,8 @@
     </header>
     <body onload = "document.getElementById('home_container').style.opacity='1'">
       <main>
+          <div id = "main_container">
+
           <div id = "home_container">
               <div class = "home_page_image_container">
                 <div class = "text_button_container"> 
@@ -55,7 +57,37 @@
               </div>
               </div>
           </div>
+          </div>
       </main>
+      <div id="shopping_cart_side_bar">
+          <div id = "shopping_cart_products_container">
+          </div>
+
+          <div class = "pricing_container">
+              <div class = "subtotal_pricing_container">
+                  <div class = "left_side_pricing">
+                      <p> Subtotal:</p>
+                      <p> Tax(CA):</p>
+                      <p> Shipping:</p>
+                      <p> Total: </p>
+                  </div>
+                  <div class = "right_side_pricing">
+                      <p class = 'pricing_subtotal'>$ 0.00</p>
+                      <p>$10.00</p>
+                      <p>$10.00</p>
+                      <p class = 'pricing_total'> $0.00</p>
+
+                  </div>
+              </div>
+              <div class ="checkout_button_holder">
+                  <button class = "checkout_button"> Checkout Securely</button>
+              </div>
+              </div>
+
+
+      </div>  
+
+</div>
     </body>
 
     <footer></footer>
@@ -63,6 +95,7 @@
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src='../scripts/shopping.js'> </script>
 <script src="../scripts/main.js"> </script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>

@@ -29,7 +29,7 @@ for (i = 0; i < navBar.length; i++){
             '<image class = "logo" src = "../../images/background/logo.png"></img>' + 
             '</div>'+
             '<div class = "nav_shopping_cart">' +
-                '<img class = "shopping_cart" src ="../../images/social_media_icons/sc.png" height="42" width="42">'+
+                '<img class = "shopping_cart" onclick = "showCart()" src ="../../images/social_media_icons/sc.png" height="42" width="42">'+
             '</div>'+
         '</div>'
 }
