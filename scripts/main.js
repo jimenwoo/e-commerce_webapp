@@ -7,8 +7,8 @@ for (i = 0; i < topBar.length; i++){
     topBar[i].innerHTML = 
         '<div class ="top_bar">' +
         '<ul class = "top_bar_content">'+
-            '<li class ="sign_up_button"> Sign In | Register </li>'+
-            '<li class ="sign_up_button"> Customer Service </li>'+
+            '<li class ="sign_up_button"> <a href="#">Sign In | Register </a> </li>'+
+            '<li class ="sign_up_button"> <a href="#"> Customer Service </a> </li>'+
             '<li class ="sign_up_button">'  +
                 '<img class = "currency_flag" src = "../images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>'+
             '</ul>'+
@@ -25,7 +25,11 @@ for (i = 0; i < navBar.length; i++){
                         '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/landing_page.html">Locations</a></li> '      +    
                     '</ul> '+
             '</div>'+
-        
+            '<div class ="nav_bar_sandwich">' +
+                '<div class = "hamburger_part"></div>'+
+                '<div class = "hamburger_part"></div>'+
+                '<div class = "hamburger_part"></div>'+
+            '</div>'+
             ' <div class = "nav_title">' +
             '<image class = "logo" src = "../images/background/logo.png"></img>' + 
             '</div>' +
@@ -35,7 +39,12 @@ for (i = 0; i < navBar.length; i++){
                 '<h4 class = "quantity_shopping_cart">  </h4>'+
             '</div>'+
             '</div>'+
-        '</div>'  
+        '</div>'  +
+       ' <div class = menu_dropdown>' +
+        '<h1> Home</h1>'+
+        '<h1> Shop</h1>'+
+        '<h1> Locations</h1>'+
+    '</div>'
 
 }
 

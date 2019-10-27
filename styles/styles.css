@@ -16,13 +16,13 @@ h3{
 
 
 }
+
 #main_container{
-    width: 97%;
     display: flex;
-    max-width: 1700px;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 
@@ -64,6 +64,7 @@ h3{
 
 .btn_container{
     width: 100%;
+    padding: .25rem;
 }
 .btn-group{
     width: 30px;
@@ -71,7 +72,6 @@ h3{
     justify-content: flex-end;
     display: inline-block;
     border-radius: 0.25rem;
-    margin-left: 2.5rem;
 }
 
 .products_container{
@@ -244,8 +244,10 @@ h3{
 }
 
 .modal_button_container{
-    width: 100%;
+    width: 92%;
     margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #shopping_cart_side_bar{
@@ -253,7 +255,7 @@ h3{
     position: absolute;
     width: 460px;
     height: 100vh;
-    top: 125px;
+    top: 112px;
     position: absolute;
     right: 0;
     background-color: #f1f1f1;
@@ -296,6 +298,10 @@ h3{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+}
+
+.shopping_cart_remove_button_holder{
+    margin-top: 1rem;
 }
 .pricing_container{
     margin-top: 1rem;
@@ -497,6 +503,9 @@ h3{
     width: 800px;
     margin-right: 1.5rem;
     height: 700px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
+    padding: 1rem;
+    
 }
 
 .header_title{
@@ -559,6 +568,7 @@ h3{
     width: 60%;
     height: 175px;
     margin-left: .5rem;
+    
 
 }
 .checkout_product_price{
@@ -572,9 +582,12 @@ h3{
 }
 
 .checkout_products_summary_view{
-    width: 300px;
-    height: 700px;
+    width: 350px;
+}
 
+.checkout_products_summary_container{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
+    padding: 1rem;
 }
 .checkout_summary{
     margin-top: .5rem;
@@ -606,4 +619,39 @@ h3{
 
 .remove_button a:hover{
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px){
+    .checkout_container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .checkout_container .checkout_products_side_view{
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .checkout_product_img_container{
+        width: 30%;
+        height: 125px;
+    }
+    .checkout_container .checkout_products_summary_view{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+    }
+
+    .nav_items{
+        display: none !important;
+    }
+
+    .nav_bar_sandwich{
+        display: block !important;
+    }
+
+    .logo{
+        max-width: 320px !important;
+    }
 }

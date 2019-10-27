@@ -84,7 +84,7 @@ let submitButton = () => {
 }
 
 let removeFromCart = (e) => {
-    shoppingCartObj.splice(e, 1)
+    shoppingCartObj.splice(e.attributes.value.value, 1)
     updateShoppingCartQuantity()
     shoppingCart()
 }
@@ -168,8 +168,10 @@ let shoppingCart = () => {
             '<button class = "shopping_cart_product_add_qty"  value ="' + i + '"onclick = "addQtyProduct(this.value)"> + </button>' +
             '<div class = "shopping_cart_product_bottom_bar_price">'+ product.productPrice + '</div>'+
         '</div>'+
-        '<div class = "shopping_cart_remove_button"> <button value = "' + i + '"onclick ="removeFromCart(this.value)"> Remove </button> </div>' + 
-    '</div>'+
+        '<div class = "shopping_cart_remove_button_holder">' + 
+        '<a href= "#" value ="' + i + '" onclick = "removeFromCart(this)" class = "remove_button"> Remove </a>' + 
+        '</div>'+
+            '</div>'+
     '</div>'
          shoppingCartContainer.appendChild(newProduct)
          updateShoppingCartQuantity()
@@ -241,11 +243,13 @@ let updateShoppingCartQuantity = () =>{
                 '</div>'+
                 '<button class = "shopping_cart_product_remove_qty"  value ="' + i + '"onclick = "removeQtyProduct(this.value)"> - </button>' +
                 '<div class = "shopping_cart_product_bottom_bar_qty">'+ product.productQuantity + '</div>'+
-                '<button class = "shopping_cart_product_add_qty"  value ="' + i + '"onclick = "addQtyProduct(this.value)"> + </button>'
+                '<button class = "shopping_cart_product_add_qty"  value ="' + i + '"onclick = "addQtyProduct(this.value)"> + </button>' +
                 '<div class = "shopping_cart_product_bottom_bar_price">'+ product.productPrice + '</div>'+
+            '</div>' +
+                '<div class = "shopping_cart_remove_button_holder">' + 
+                '<a href= "#" value ="' + i + '" onclick = "removeFromCart(this)" class = "remove_button"> Remove </a>' + 
+                '</div>'+
             '</div>'+
-            '<div class = "shopping_cart_remove_button"> <button value = "' + i + '"onclick ="removeFromCart(this.value)"> Remove </button> </div>' + 
-        '</div>'+
         '</div>'
             updateShoppingCartQuantity()
             shoppingCartContainer.appendChild(newProduct)
