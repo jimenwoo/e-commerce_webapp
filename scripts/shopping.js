@@ -52,6 +52,10 @@ let sizeButton = (e) => {
     size = e.innerHTML;
 }
 
+let test = () => {
+    console.log(shoppingCartObj)
+}
+
 let submitButton = () => {
     prod = document.getElementById('product_title')
     err = document.querySelector(".sizing_error")
@@ -79,6 +83,34 @@ let submitButton = () => {
        size = null
 }
 
+let removeFromCart = (e) => {
+    shoppingCartObj.splice(e, 1)
+    updateShoppingCartQuantity()
+    shoppingCart()
+}
+
+let addQtyProduct = (e) =>{
+    let int = parseInt(shoppingCartObj[e].productQuantity)
+    shoppingCartObj[e].productQuantity = int+1
+    let newShoppingCartQuantity = document.querySelector('.shopping_cart_product_bottom_bar_qty')
+    newShoppingCartQuantity.innerHTML = shoppingCartObj[e].productQuantity 
+    shoppingCart()
+}
+
+let removeQtyProduct = (e) => {
+    let int = parseInt(shoppingCartObj[e].productQuantity)
+    shoppingCartObj[e].productQuantity = int-1
+    if(shoppingCartObj[e].productQuantity == 0 ){
+        shoppingCartObj.splice(e, 1)
+        shoppingCart()
+    }
+    else{
+        let newShoppingCartQuantity = document.querySelector('.shopping_cart_product_bottom_bar_qty')
+        newShoppingCartQuantity.innerHTML = shoppingCartObj[e].productQuantity 
+        shoppingCart() 
+    }
+    updateShoppingCartQuantity()
+}
 
 let toggleCart = () =>{
     let cartView = document.getElementById('main_container')
@@ -127,77 +159,97 @@ let shoppingCart = () => {
         '</div>'+
         '</div>'+
     '<div class = "shopping_cart_product_bottom_bar">'+
-            '<div class = "shopping_cart_product_bottom_bar_qty">'+
+            '<div class = "shopping_cart_product_bottom_bar_qty_text">'+
+            
                 'QTY:' +
             '</div>'+
-            '<button> - </button>'+
+            '<button class = "shopping_cart_product_remove_qty"  value ="' + i + '"onclick = "removeQtyProduct(this.value)"> - </button>'+
             '<div class = "shopping_cart_product_bottom_bar_qty">'+ product.productQuantity + '</div>'+
-            '<button> + </button>'+
+            '<button class = "shopping_cart_product_add_qty"  value ="' + i + '"onclick = "addQtyProduct(this.value)"> + </button>' +
             '<div class = "shopping_cart_product_bottom_bar_price">'+ product.productPrice + '</div>'+
         '</div>'+
+        '<div class = "shopping_cart_remove_button"> <button value = "' + i + '"onclick ="removeFromCart(this.value)"> Remove </button> </div>' + 
     '</div>'+
     '</div>'
-         let cartQuantity = document.querySelector('.quantity_shopping_cart')
-         cartQuantity.innerHTML = shoppingCartObj.length
          shoppingCartContainer.appendChild(newProduct)
+         updateShoppingCartQuantity()
          priceCalculator()
     }
+    priceCalculator()
 }
 
 let priceCalculator = () => {
+    let subtotal = document.querySelector('.pricing_subtotal')
+    let total = document.querySelector('.pricing_total')
+
+    if(shoppingCartObj.length == 0){
+        totalPrice = 0;
+        subTotal = 0;
+        subtotal.innerHTML = '$' + subTotal + '.00'
+        total.innerHTML = "$" + totalPrice + '.00'
+    }
+    else{
     for (var i = 0; i < shoppingCartObj.length; i++){
         let productTotal = parseInt(shoppingCartObj[i].productValue) * parseInt(shoppingCartObj[i].productQuantity)
         subTotal += productTotal
+    }  
+        totalPrice = subTotal + 20 
+        subtotal.innerHTML = '$' + subTotal + '.00'
+        total.innerHTML = "$" + totalPrice + '.00'
+        subTotal = 0;
+        total = 0;
     }
-
-    totalPrice = subTotal + 20 
-    let subtotal = document.querySelector('.pricing_subtotal')
-    subtotal.innerHTML = '$' + subTotal + '.00'
-    let total = document.querySelector('.pricing_total')
-    total.innerHTML = "$" + totalPrice + '.00'
-    subTotal = 0;
-    total = 0;
  }
 
-
+let updateShoppingCartQuantity = () =>{
+    let cartQuantity = document.querySelector('.quantity_shopping_cart')
+    if(shoppingCartObj.length == 0 ){
+        cartQuantity.innerHTML = ''
+    }
+    else{
+        cartQuantity.innerHTML = shoppingCartObj.length
+    }
+}
 
  window.onload = () => {
     let cartQuantity = document.querySelector('.quantity_shopping_cart')
-    cartQuantity.innerHTML = cartQuantity.length
-    let cartQuantity2 = document.querySelector('.quantity_shopping_cart')
+        if(sessionStorage.length > 0){
+        cartQuantity.innerHTML = cartQuantity.length
 
-    for(var i = 0; i < sessionStorage.length; i++){
-        shoppingCartObj.push(JSON.parse(sessionStorage.getItem(i)))
-        var newProduct = document.createElement('div')
-        var product = JSON.parse(sessionStorage.getItem(i))
-        newProduct.innerHTML = '<div class = "shopping_cart_product">'+
-        '<div class = shopping_cart_product_picture>'+
-            '<div class ="deleteButton">'+
-                '</div>'+
-            '<img id = "shopping_cart_product_picture_image" src= "' + product.productURL +  '"' + '>' +
-        '</div>'+
-        '<div class = "shopping_cart_product_details"> '+
-            '<div class ="shopping_cart_product_header"> '+
-                '<div id ="shopping_cart_product_title">'+
-                '<div class = "shopping_cart_product_name">' + product.productName + '</div>'+
-                '<div class = "shopping_cart_product_size">'  + product.productSize + '</div> ' +
-                '<div class = "shopping_cart_product_color" style = "color:#6c757d">' + product.productColor + '</div>'+
-        '</div>'+
-        '</div>'+
-    '<div class = "shopping_cart_product_bottom_bar">'+
-            '<div class = "shopping_cart_product_bottom_bar_qty">'+
-                'QTY:' +
+        let cartQuantity2 = document.querySelector('.quantity_shopping_cart')
+        for(var i = 0; i < sessionStorage.length; i++){
+            shoppingCartObj.push(JSON.parse(sessionStorage.getItem(i)))
+            var newProduct = document.createElement('div')
+            var product = JSON.parse(sessionStorage.getItem(i))
+            newProduct.innerHTML = '<div class = "shopping_cart_product" value ="' +  i +  '">' + 
+            '<div class = shopping_cart_product_picture>'+
+                '<div class ="deleteButton">'+
+                    '</div>'+
+                '<img id = "shopping_cart_product_picture_image" src= "' + product.productURL +  '"' + '>' +
             '</div>'+
-            '<button> - </button>'+
-            '<div class = "shopping_cart_product_bottom_bar_qty">'+ product.productQuantity + '</div>'+
-            '<button> + </button>'+
-            '<div class = "shopping_cart_product_bottom_bar_price">'+ product.productPrice + '</div>'+
+            '<div class = "shopping_cart_product_details"> '+
+                '<div class ="shopping_cart_product_header"> '+
+                    '<div id ="shopping_cart_product_title">'+
+                    '<div class = "shopping_cart_product_name">' + product.productName + '</div>'+
+                    '<div class = "shopping_cart_product_size">'  + product.productSize + '</div> ' +
+                    '<div class = "shopping_cart_product_color" style = "color:#6c757d">' + product.productColor + '</div>'+
+            '</div>'+
+            '</div>'+
+        '<div class = "shopping_cart_product_bottom_bar">'+
+                '<div class = "shopping_cart_product_bottom_bar_qty_text">'+
+                    'QTY:' +
+                '</div>'+
+                '<button class = "shopping_cart_product_remove_qty"  value ="' + i + '"onclick = "removeQtyProduct(this.value)"> - </button>' +
+                '<div class = "shopping_cart_product_bottom_bar_qty">'+ product.productQuantity + '</div>'+
+                '<button class = "shopping_cart_product_add_qty"  value ="' + i + '"onclick = "addQtyProduct(this.value)"> + </button>'
+                '<div class = "shopping_cart_product_bottom_bar_price">'+ product.productPrice + '</div>'+
+            '</div>'+
+            '<div class = "shopping_cart_remove_button"> <button value = "' + i + '"onclick ="removeFromCart(this.value)"> Remove </button> </div>' + 
         '</div>'+
-    '</div>'+
-    '</div>'
-         let cartQuantity = document.querySelector('.quantity_shopping_cart')
-         cartQuantity.innerHTML = shoppingCartObj.length
-         shoppingCartContainer.appendChild(newProduct)
-         priceCalculator()
+        '</div>'
+            updateShoppingCartQuantity()
+            shoppingCartContainer.appendChild(newProduct)
+            priceCalculator()
+        }
     }
 }

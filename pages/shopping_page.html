@@ -13,37 +13,54 @@
     <body>
         <main>                                                       
             <div id = "main_container">
-                <section class = "filter_menu">
-                    <h1> Product Filter</h1>
-                    <div class = "filter_options"> 
-                            <div class = "filter_heading"> 
-                            <h1> Color</h1>
-                            <div class="filter_radio">
-                                <label class="block">
-                                    <input type="checkbox" onclick = "handleColor(this)" value = "black" name="radFilter"> Black</label>
-                                 <label class="block">
-                                    <input type="checkbox" onclick = "handleColor(this)" value = "gray" name="radFilter"> Gray</label>
-                                <label class="block">
-                                    <input type="checkbox" onclick = "handleColor(this)" value = "red" name="radFilter"> Red</label>
-                                <label>
-                                    <input type="checkbox" onclick = "handleColor(this)" value = "blue" name="radFilter"> Blue</label>
-                                 <label class="block">
-                                    <input type="checkbox" onclick = "handleColor(this)" value = "khaki" name="radFilter"> Khaki</label>
+                        <div class = "filter_menu">
+                                <div class = "filter_options"> 
+                                        <div class = "filter_heading"> 
+                                        <h1> Color</h1>
+                                        <div class="filter_radio">
+                                            <label class="block">
+                                                <input type="checkbox" onclick = "handleColor(this)" value = "black" name="radFilter"> Black</label>
+                                             <label class="block">
+                                                <input type="checkbox" onclick = "handleColor(this)" value = "gray" name="radFilter"> Gray</label>
+                                            <label class="block">
+                                                <input type="checkbox" onclick = "handleColor(this)" value = "red" name="radFilter"> Red</label>
+                                            <label>
+                                                <input type="checkbox" onclick = "handleColor(this)" value = "blue" name="radFilter"> Blue</label>
+                                             <label class="block">
+                                                <input type="checkbox" onclick = "handleColor(this)" value = "khaki" name="radFilter"> Khaki</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "filter_options"> 
+                                    <div class = "filter_heading"> 
+                                    <h1> Category</h1>
+                                    <div class="filter_radio">
+                                        <label class="block">
+                                            <input type="checkbox" onclick = "handleColor(this)" value = "black" name="radFilter"> Tees</label>
+                                        <label class="block">
+                                            <input type="checkbox" onclick = "handleColor(this)" value = "red" name="radFilter"> Sweats</label>
+                                        <label class="block">
+                                                <input type="checkbox" onclick = "handleColor(this)" value = "blue" name="radFilter"> Pants/Chinos</label>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                </section>
+
+
+                                </div>
                     
-                <section class = "merchandise_view">
-                        <div class="btn-group">
-                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Sort By
-                            </button>
-                            <div class="dropdown-menu">
-                                <button class="dropdown-item" onclick = "handleSortClick(this)" type="button">Price: Low to High</button>
-                                <button class="dropdown-item" onclick = "handleSortClick(this)" type="button">Price: High to Low</button>
-                            </div>
-                        </div>
+                    <div class = "merchandise_view">
                     <div class = "products_view">
+                            <div class = "btn_container">
+                                    <div class="btn-group">
+                                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Sort By
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item" onclick = "handleSortClick(this)" type="button">Price: Low to High</button>
+                                                <button class="dropdown-item" onclick = "handleSortClick(this)" type="button">Price: High to Low</button>
+                                            </div>
+                                        </div>
+                                    </div>
                         <div class = "products_container">
                             <a href="#" class = "product_card" onclick = "addToCart(this)">
                                 <img class="card-img-top" src="../images/products/black_tshirt.jpeg" alt="">
@@ -157,11 +174,83 @@
                                 </div>
                         </a>
 
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/gray_sweatpants.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Slim Fit Sweatpant</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "gray" > Gray</h6>
+                            <h6 class="card-subtitle mb-3" value = "40" >$40</h6>
+                            </div>
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/blue_sweatpants.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Slim Fit Sweatpant</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "blue" > Blue</h6>
+                            <h6 class="card-subtitle mb-3" value = "40" >$40</h6>
+                            </div>
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/khaki_sweatshirt.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Crewneck Sweatshirt</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "khaki" > Khaki</h6>
+                            <h6 class="card-subtitle mb-3" value = "40" >$40</h6>
+                            </div>
+                        </a>
+                        <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/denim_pant.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Straight fit Jean</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "blue" > Blue</h6>
+                            <h6 class="card-subtitle mb-3" value = "65" >$65</h6>
+                            </div>
+                         </a>
+                         <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/denim_gray.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Straight-fit Jean</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "gray" > Gray </h6>
+                            <h6 class="card-subtitle mb-3" value = "65" >$65</h6>
+                            </div>
+                         </a>
+                         <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/red_chino.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Straight-fit Chino Pant</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "red" > Red </h6>
+                            <h6 class="card-subtitle mb-3" value = "50" >$50</h6>
+                            </div>
+                         </a>
+                         <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/khaki_short.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Chino Short</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "khaki" > Khaki </h6>
+                            <h6 class="card-subtitle mb-3" value = "35" >$35</h6>
+                            </div>
+                         </a>
+                         <a href="#" class = "product_card" onclick = "addToCart(this)">
+                            <img class="card-img-top" 
+                            src="../images/products/blue_short.jpeg" alt="">
+                            <div class="card-body">
+                            <h6 class="card-title">Chino Short</h5>
+                            <h6 class="card-subtitle mb-2 text-muted" value = "blue" > Blue </h6>
+                            <h6 class="card-subtitle mb-3" value = "35" >$35</h6>
+                            </div>
+                         </a> 
                         </div>
 
                     </div>  
-                    
-                 </section>
+                </div>
+                
 
             </div> 
         </main>
@@ -216,7 +305,7 @@
                         </div>
 
                         <div class ="sizing_error">
-                            <h2 class = "text_modal" style= "color: red"> Please Select a Size!</h2>
+                            <h2 class = "text_modal" style= "color: #6c757d"> Please Select a Size!</h2>
                         </div>
                          </div>
                     </div>

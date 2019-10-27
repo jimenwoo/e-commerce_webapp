@@ -25,17 +25,18 @@ for (i = 0; i < navBar.length; i++){
                         '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/landing_page.html">Locations</a></li> '      +    
                     '</ul> '+
             '</div>'+
+        
             ' <div class = "nav_title">' +
             '<image class = "logo" src = "../images/background/logo.png"></img>' + 
-            '</div>'+
+            '</div>' +
             '<div class = "nav_shopping_cart">' +
                 '<img class = "shopping_cart" onclick = "toggleCart()" src ="../images/social_media_icons/sc.png" height="42" width="42">'+
                 '<div class = "nav_shopping_cart_quantity">'+
                 '<h4 class = "quantity_shopping_cart">  </h4>'+
             '</div>'+
             '</div>'+
+        '</div>'  
 
-        '</div>'
 }
 
 
