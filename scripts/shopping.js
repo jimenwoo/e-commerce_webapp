@@ -2,6 +2,7 @@ let background = document.querySelectorAll("main, header, footer, div.top_bar")
 let modalContent = document.querySelector("#modal_content")
 let shoppingCartContainer = document.querySelector('#shopping_cart_products_container')
 
+let opened = false
 let shoppingCartObj = []
 let price;
 let size;
@@ -9,7 +10,19 @@ let subTotal = 0
 let cartToggled = false;
 let totalPrice = 0;
 
-
+document.querySelector('.nav_bar_sandwich')
+        .addEventListener('click', function (event) {
+            let dropdownMenu = document.querySelector('.menu_dropdown')
+            if(opened){
+                dropdownMenu.style.display = "none"
+                opened = false;
+            }
+            else{
+                dropdownMenu.style.display = "block";
+                opened = true;
+            }
+        });
+        
 //adding item to Shopping cart Side Bar & displays Modal
 let addToCart = (e) =>{
     let price = '$' 
@@ -220,8 +233,6 @@ let removeQtyProduct = (e) => {
     }
     updateShoppingCartQuantity()
 }
-
-
 
  window.onload = () => {
     let cartQuantity = document.querySelector('.quantity_shopping_cart')

@@ -7,10 +7,8 @@
 .checkout_products_side_view{
     width: 800px;
     margin-right: 1.5rem;
-    height: 700px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
-    padding: 1rem;
-    
+    border: 1px solid rgb(214, 214, 214);
+
 }
 
 .header_title{
@@ -44,17 +42,30 @@
     text-align: end;
 }
 
+.checkout_size_header{
+    padding: 1rem;
+
+}
 
 .checkout_products_side_container{
     height: 600px;
-    overflow: scroll;
-    
+    padding: 0 1rem 0 1rem;
+    overflow: auto;
 }
 
+.remove_button{
+    color:#6c757d
+}
+
+.remove_button:hover{
+    color: #343a40;
+    text-decoration: none;   
+}
 .checkout_product_card{
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
 .checkout_product_img_description{
@@ -92,8 +103,8 @@
 }
 
 .checkout_products_summary_container{
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
     padding: 1rem;
+    border: 1px solid rgb(214, 214, 214);
 }
 .checkout_summary{
     margin-top: .5rem;

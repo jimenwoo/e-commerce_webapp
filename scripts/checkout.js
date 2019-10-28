@@ -22,7 +22,7 @@ window.onload = () => {
                     '</div>'+
                     '<div class = "checkout_product_description">'+
                         '<p class = "product_description_title">' +
-                            product.productName +
+                            product.productName + 
                         '</p>'+
                         '<p class = "product_description_size">'+
                             product.productSize +

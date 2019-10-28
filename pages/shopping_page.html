@@ -4,8 +4,6 @@
         <link rel = "stylesheet" type="text/css" href = "../styles/styles.css">
         <link rel = "stylesheet" type="text/css" href = "../styles/format.css">
         <link href="https://fonts.googleapis.com/css?family=Cantora+One&display=swap" rel="stylesheet">
-
-
     </head>
     <div class = "top_bar"></div>
     <header>   </header>
@@ -14,9 +12,10 @@
         <main>                                                       
             <div id = "main_container">
                         <div class = "filter_menu">
+                                <h2> Filter</h2>
                                 <div class = "filter_options"> 
                                         <div class = "filter_heading"> 
-                                        <h1> Color</h1>
+                                        <h4> Color</h4>
                                         <div class="filter_radio">
                                             <label class="block">
                                                 <input type="checkbox" onclick = "handleColor(this)" value = "black" name="radFilter"> Black</label>
@@ -31,23 +30,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class = "filter_options"> 
-                                    <div class = "filter_heading"> 
-                                    <h1> Category</h1>
-                                    <div class="filter_radio">
-                                        <label class="block">
-                                            <input type="checkbox" onclick = "handleColor(this)" value = "black" name="radFilter"> Tees</label>
-                                        <label class="block">
-                                            <input type="checkbox" onclick = "handleColor(this)" value = "red" name="radFilter"> Sweats</label>
-                                        <label class="block">
-                                                <input type="checkbox" onclick = "handleColor(this)" value = "blue" name="radFilter"> Pants/Chinos</label>
-                                    </div>
                                 </div>
-                            </div>
-
-
-                                </div>
-                    
                     <div class = "merchandise_view">
                     <div class = "products_view">
                             <div class = "btn_container">
@@ -322,7 +305,7 @@
                                 <p> Subtotal:</p>
                                 <p> Tax(CA):</p>
                                 <p> Shipping:</p>
-                                <p> Total: </p>
+                                <p style= "font-weight: bold"> Total: </p>
                             </div>
                             <div class = "right_side_pricing">
                                 <p class = 'pricing_subtotal'>$ 0.00</p>

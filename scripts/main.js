@@ -37,13 +37,13 @@ for (i = 0; i < navBar.length; i++){
                 '<img class = "shopping_cart" onclick = "toggleCart()" src ="../images/social_media_icons/sc.png" height="42" width="42">'+
                 '<div class = "nav_shopping_cart_quantity">'+
                 '<h4 class = "quantity_shopping_cart">  </h4>'+
+                '</div>'+
             '</div>'+
-            '</div>'+
-        '</div>'  +
-       ' <div class = menu_dropdown>' +
-        '<h1> Home</h1>'+
-        '<h1> Shop</h1>'+
-        '<h1> Locations</h1>'+
+       ' <ul class = menu_dropdown>' +
+       '<li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="../pages/home_page.html">Home</a></li>' +
+       '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/shopping_page.html">Shop</a></li>' +
+       '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/landing_page.html">Locations</a></li> '      +  
+        '</ul>'  +
     '</div>'
 
 }
@@ -57,28 +57,28 @@ for (i = 0; i < footer.length; i++){
                ' <div class = "about_footer"> '+
                    ' <ul class = "about_footer_section"> ' + 
                         '<h4 style="color:#4c4c4b"> About </h4>'+
-                        '<li> Careers </li>'+
-                        '<li> Stores </li>'+
-                        '<li> Manufacturing Process </li>'+
-                        '<li> International </li>'+
-                        '<li> Accessibility </li>'+
+                        '<a class = "footer_links" href > Careers </a>'+
+                        '<a class = "footer_links" href> Stores </a>'+
+                        '<a class = "footer_links" href> Manufacturing Process </a>'+
+                        '<a class = "footer_links" href> International </a>'+
+                        '<a class = "footer_links" href> Accessibility </a>'+
                    ' </ul> '+
                 '</div>' + 
                 ' <div class = "locations_footer"> '+
                    ' <ul class = "locations_footer_section"> ' + 
                         '<h4 style="color:#4c4c4b" > Locations </h4>'+
-                        '<li> Hong Kong </li>'+
-                        '<li> Brooklyn </li>'+
-                        '<li> San Francisco </li>'+
-                        '<li> San Jose </li>'+
-                        '<li> Seattle </li>'+
+                        '<a class = "footer_links" href> Hong Kong </a>'+
+                        '<a class = "footer_links" href> Brooklyn </a>'+
+                        '<a class = "footer_links" href> San Francisco </a>'+
+                        '<a class = "footer_links" href> San Jose </a>'+
+                        '<a class = "footer_links" href> Seattle </a>'+
                    ' </ul> '+
                 '</div>' + 
                 ' <div class = "contact_footer"> '+
                    ' <ul class = "contact_footer_section"> ' + 
                         '<h4 style="color:#4c4c4b"> Contact Us </h4>'+
-                        '<li> +1 (111) 111-1111 </li>'+
-                        '<li> info@brooklyn.com </li>'+
+                        '<a class = "footer_links" href> +1 (111) 111-1111 </a>'+
+                        '<a class = "footer_links" href> info@brooklyn.com </a>'+
                    ' </ul> '+
                 '</div>' + 
                 '</div>' + 
@@ -87,7 +87,7 @@ for (i = 0; i < footer.length; i++){
                    ' Sign up to receive Brooklyn Apparel emails on new releases, sales and exclusive content!'+
                     '<div class = "email_button">'+
                           '  <input class = "email_text" name ="email" type = "email" placeholder="Enter your email address">' +
-                           ' <button class = "email_submit_button" type= "submit"> Join </button> '+
+                           ' <button type="button" class="btn btn-secondary type= "submit" style = "height: 35px; margin-bottom: 5px"> Join </button> '+
                             '<div class = "social_icons"> '+
                             '<li> <img src = "../images/social_media_icons/ig.png" height="42px" width = "42px" </li>' + 
                             '<li> <img src = "../images/social_media_icons/fb.png" height="42px" width = "42px" </li>' +
