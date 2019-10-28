@@ -9,6 +9,8 @@ let subTotal = 0
 let cartToggled = false;
 let totalPrice = 0;
 
+
+//adding item to Shopping cart Side Bar & displays Modal
 let addToCart = (e) =>{
     let price = '$' 
     let product_title;
@@ -35,6 +37,7 @@ let addToCart = (e) =>{
     modalContent.style.display = "block";
 }
 
+//closing product Modal Screen
 let closeModal = () => {
     err = document.querySelector(".sizing_error")
 
@@ -48,14 +51,12 @@ let closeModal = () => {
     
 }
 
+//setting size of product to store 
 let sizeButton = (e) => {
     size = e.innerHTML;
 }
 
-let test = () => {
-    console.log(shoppingCartObj)
-}
-
+//submitting product to shopping cart
 let submitButton = () => {
     prod = document.getElementById('product_title')
     err = document.querySelector(".sizing_error")
@@ -83,35 +84,8 @@ let submitButton = () => {
        size = null
 }
 
-let removeFromCart = (e) => {
-    shoppingCartObj.splice(e.attributes.value.value, 1)
-    updateShoppingCartQuantity()
-    shoppingCart()
-}
 
-let addQtyProduct = (e) =>{
-    let int = parseInt(shoppingCartObj[e].productQuantity)
-    shoppingCartObj[e].productQuantity = int+1
-    let newShoppingCartQuantity = document.querySelector('.shopping_cart_product_bottom_bar_qty')
-    newShoppingCartQuantity.innerHTML = shoppingCartObj[e].productQuantity 
-    shoppingCart()
-}
-
-let removeQtyProduct = (e) => {
-    let int = parseInt(shoppingCartObj[e].productQuantity)
-    shoppingCartObj[e].productQuantity = int-1
-    if(shoppingCartObj[e].productQuantity == 0 ){
-        shoppingCartObj.splice(e, 1)
-        shoppingCart()
-    }
-    else{
-        let newShoppingCartQuantity = document.querySelector('.shopping_cart_product_bottom_bar_qty')
-        newShoppingCartQuantity.innerHTML = shoppingCartObj[e].productQuantity 
-        shoppingCart() 
-    }
-    updateShoppingCartQuantity()
-}
-
+//toggling shopping cart side bar
 let toggleCart = () =>{
     let cartView = document.getElementById('main_container')
 
@@ -136,6 +110,7 @@ let toggleCart = () =>{
     cartToggled = !cartToggled
 }
 
+//populates shopping cart view
 let shoppingCart = () => {
     shoppingCartContainer.innerHTML = ''
     sessionStorage.clear()
@@ -180,6 +155,7 @@ let shoppingCart = () => {
     priceCalculator()
 }
 
+//calcuates total prices in shopping cart 
 let priceCalculator = () => {
     let subtotal = document.querySelector('.pricing_subtotal')
     let total = document.querySelector('.pricing_total')
@@ -203,6 +179,7 @@ let priceCalculator = () => {
     }
  }
 
+ //updates shopping cart quantity indicator 
 let updateShoppingCartQuantity = () =>{
     let cartQuantity = document.querySelector('.quantity_shopping_cart')
     if(shoppingCartObj.length == 0 ){
@@ -212,6 +189,39 @@ let updateShoppingCartQuantity = () =>{
         cartQuantity.innerHTML = shoppingCartObj.length
     }
 }
+
+//remove item from cart
+let removeFromCart = (e) => {
+    shoppingCartObj.splice(e.attributes.value.value, 1)
+    updateShoppingCartQuantity()
+    shoppingCart()
+}
+
+//adding quantity for cart item
+let addQtyProduct = (e) =>{
+    let int = parseInt(shoppingCartObj[e].productQuantity)
+    shoppingCartObj[e].productQuantity = int+1
+    let newShoppingCartQuantity = document.querySelector('.shopping_cart_product_bottom_bar_qty')
+    newShoppingCartQuantity.innerHTML = shoppingCartObj[e].productQuantity 
+    shoppingCart()
+}
+//remove cart item
+let removeQtyProduct = (e) => {
+    let int = parseInt(shoppingCartObj[e].productQuantity)
+    shoppingCartObj[e].productQuantity = int-1
+    if(shoppingCartObj[e].productQuantity == 0 ){
+        shoppingCartObj.splice(e, 1)
+        shoppingCart()
+    }
+    else{
+        let newShoppingCartQuantity = document.querySelector('.shopping_cart_product_bottom_bar_qty')
+        newShoppingCartQuantity.innerHTML = shoppingCartObj[e].productQuantity 
+        shoppingCart() 
+    }
+    updateShoppingCartQuantity()
+}
+
+
 
  window.onload = () => {
     let cartQuantity = document.querySelector('.quantity_shopping_cart')
