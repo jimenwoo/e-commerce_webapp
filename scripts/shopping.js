@@ -3,11 +3,11 @@ let modalContent = document.querySelector("#modal_content")
 let shoppingCartContainer = document.querySelector('#shopping_cart_products_container')
 
 let opened = false
+let cartToggled = false;
 let shoppingCartObj = []
 let price;
 let size;
 let subTotal = 0
-let cartToggled = false;
 let totalPrice = 0;
 
 document.querySelector('.nav_bar_sandwich')
@@ -28,7 +28,6 @@ let addToCart = (e) =>{
     let price = '$' 
     let product_title;
     let color;
-    let picture;
 
     for(i = 0; i < background.length; i++){
         background[i].style.opacity = '0.2';
@@ -46,7 +45,7 @@ let addToCart = (e) =>{
     document.getElementById("product_title").children[1].setAttribute('value', e.children[1].children[2].attributes.value.value )
     document.getElementById("product_title").children[2].innerHTML = color
     document.getElementById('modal_picture').src = e.children[0].src
-
+    document.getElementById('quantity_val').value = '1'
     modalContent.style.display = "block";
 }
 
@@ -66,7 +65,12 @@ let closeModal = () => {
 
 //setting size of product to store 
 let sizeButton = (e) => {
-    size = e.innerHTML;
+    size = e.innerHTML
+    let sizes = document.querySelectorAll('.product_size')
+    for(i = 0; i <sizes.length; i++){
+        sizes[i].children[0].style.boxShadow = 'none'
+    }
+    e.style.boxShadow = 'inset 0 0 0 1px black';
 }
 
 //submitting product to shopping cart
@@ -194,12 +198,16 @@ let priceCalculator = () => {
 
  //updates shopping cart quantity indicator 
 let updateShoppingCartQuantity = () =>{
+    let totalQuantity= 0;
     let cartQuantity = document.querySelector('.quantity_shopping_cart')
     if(shoppingCartObj.length == 0 ){
         cartQuantity.innerHTML = ''
     }
     else{
-        cartQuantity.innerHTML = shoppingCartObj.length
+        for(var i = 0; i <shoppingCartObj.length; i++){
+            totalQuantity += parseInt(shoppingCartObj[i].productQuantity)
+        }
+        cartQuantity.innerHTML = totalQuantity
     }
 }
 
