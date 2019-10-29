@@ -60,8 +60,9 @@ let closeModal = () => {
     }
     document.querySelector('body').style.overflow = 'scroll'
     err.style.display = 'none';
-    shoppingModalOpened = false;
-    
+    shoppingModalOpened = false; 
+    let modal = document.querySelector('#modal_content')
+    modal.style.display = 'none'
 }
 
 //setting size of product to store 
@@ -80,7 +81,6 @@ let submitButton = () => {
     err = document.querySelector(".sizing_error")
     e = document.getElementById('quantity_val')
     imgURL = document.getElementById('modal_picture')
-
        if (size == null){
            err.style.display = 'block';
        }
@@ -100,6 +100,8 @@ let submitButton = () => {
         err.children[0].innerHTML = "Added to Cart!"
        } 
        size = null
+       closeModal()
+       toggleCart()
 }
 
 

@@ -7,7 +7,7 @@ for (i = 0; i < topBar.length; i++){
     topBar[i].innerHTML = 
         '<ul class = "top_bar_content">'+
         '<button onclick = "showSignUpModal()" class ="sign_in_button"> Sign In / Register </button>'+
-        '<li class ="sign_up_button"> <a href="#"> Customer Service </a> </li>'+
+        '<button onclick = "location.href=' + "'contact_us.html'" + '"class ="sign_in_button"> Customer Service </button>'+
         '<li class ="sign_up_button"> <img class = "currency_flag" src = "../images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>'+
         '</ul>'
 }
@@ -66,11 +66,11 @@ for (i = 0; i < footer.length; i++){
                 ' <div class = "locations_footer"> '+
                    ' <ul class = "locations_footer_section"> ' + 
                         '<h4 style="color:#4c4c4b" > Locations </h4>'+
-                        '<a class = "footer_links" href> Hong Kong </a>'+
-                        '<a class = "footer_links" href> Brooklyn </a>'+
-                        '<a class = "footer_links" href> San Francisco </a>'+
-                        '<a class = "footer_links" href> San Jose </a>'+
-                        '<a class = "footer_links" href> Seattle </a>'+
+                        '<a class = "footer_links"> Hong Kong </a>'+
+                        '<a class = "footer_links"> Brooklyn </a>'+
+                        '<a class = "footer_links"> San Francisco </a>'+
+                        '<a class = "footer_links"> San Jose </a>'+
+                        '<a class = "footer_links"> Seattle </a>'+
                    ' </ul> '+
                 '</div>' + 
                 ' <div class = "contact_footer"> '+

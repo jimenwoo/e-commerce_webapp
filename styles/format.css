@@ -9,11 +9,11 @@ header{
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding-top: .25rem;
-    height: 2rem;
+    height: 2.5rem;
     border-bottom: 1px solid rgb(214, 214, 214);
     background-color: #f2f2f2;
-
+    align-content: center;
+    padding-top: 1rem;
 }
 
 .top_bar_content{

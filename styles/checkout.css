@@ -3,6 +3,7 @@
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1rem;
 }
 .checkout_products_side_view{
     width: 800px;
