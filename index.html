@@ -11,11 +11,10 @@
     </head>
     <div class ="top_bar"> 
             <ul class = "top_bar_content">
-                <li class ="sign_up_button"> <a href="#">Sign In | Register </a> </li>
-                <li class ="sign_up_button"> <a href="#"> Customer Service </a> </li>
-                <li class ="sign_up_button">  
-                    <img class = "currency_flag" src = "images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>
-                </ul>
+                    <button onclick = "showSignUpModal()" class ="sign_in_button"> Sign In / Register </button>
+                    <li class ="sign_up_button"> <a href="#"> Customer Service </a> </li>
+                    <li class ="sign_up_button"> <img class = "currency_flag" src = "images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>
+                    </ul>'
             </div>     
                 <header>
                         <div class = "nav_bar"> 
@@ -92,6 +91,86 @@
           </div>
           </div>
       </main>
+      <div class ="sign_up_modal">
+            <div class="sign_up_modal_buttons">
+               <div value = "login" class ="sign_up_modal_option" onclick = "signUpModal(this)">
+                   <a> Log In</a>
+                </div>
+                <div value ="register" class ="sign_up_modal_option" onclick = "signUpModal(this)" >
+                   <a> Register</a>
+               </div>
+               <div class ="closeSignUpModalButton">
+                    <button type="button" onclick="closeSignUpModal()" id ="deleteFromCart" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            </div>
+
+            <div class ="register_sign_modal_text_fields_container">
+               <h2> Register</h2>
+               <div class = "register_name_text_headers">
+                   <div class ="register_name">
+                       <h6> First Name</h6>
+                   </div>
+                   <div class ="register_name">
+                       <h6> Last Name</h6>
+                       </div>
+               </div>
+               <div class = "register_name_fields">
+                   <input class ="text_field">
+                   <input class ="text_field">
+               </div>
+
+               <div class = "register_headers">
+                   <div class ="register_email">
+                       <h6> Email </h6>
+                   </div>
+               </div>
+               <input class ="text_field">
+
+               <div class = "register_headers">
+                       <div class ="register_email">
+                           <h6> Confirm Email </h6>
+                       </div>
+                   </div>
+                   <input class ="text_field">
+
+               <div class = "register_headers">
+                       <div class ="register_password">
+                           <h6> Password </h6>
+                       </div>
+                   </div>
+                   <input class ="text_field">
+
+               
+               <div class = "register_headers">
+                       <div class ="register_password">
+                           <h6> Confirm Password </h6>
+                       </div>
+                   </div>
+                   <input class ="text_field">
+               <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-top: 1rem"> Create Account</button>
+
+            </div>
+            <div class ="login_sign_modal_text_fields_container">
+                   <h2> Login</h2>
+
+                   <div class = "register_headers">
+                       <div class ="register_email">
+                           <h6> Email </h6>
+                       </div>
+                   </div>
+                   <input class ="text_field">
+                   <div class = "register_headers">
+                           <div class ="register_password">
+                               <h6> Password </h6>
+                           </div>
+                       </div>
+                       <input class ="text_field">
+                       <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-top: 1rem"> Log In</button>
+
+                </div>
+        </div>
       <div id="shopping_cart_side_bar">
           <div id = "shopping_cart_products_container">
           </div>
@@ -176,11 +255,93 @@
                         <p> High Quality Apparel for Less</p>
                     </div>
                 </div>
+
+                          <div class ="sign_up_modal">
+                    <div class="sign_up_modal_buttons">
+                       <div value = "login" class ="sign_up_modal_option" onclick = "signUpModal(this)">
+                           <a> Log In</a>
+                        </div>
+                        <div value ="register" class ="sign_up_modal_option" onclick = "signUpModal(this)" >
+                           <a> Register</a>
+                       </div>
+                       <div class ="closeSignUpModalButton">
+                            <button type="button" onclick="closeSignUpModal()" id ="deleteFromCart" class="close" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                    </div>
+    
+                    <div class ="register_sign_modal_text_fields_container">
+                       <h2> Register</h2>
+                       <div class = "register_name_text_headers">
+                           <div class ="register_name">
+                               <h6> First Name</h6>
+                           </div>
+                           <div class ="register_name">
+                               <h6> Last Name</h6>
+                               </div>
+                       </div>
+                       <div class = "register_name_fields">
+                           <input class ="text_field">
+                           <input class ="text_field">
+                       </div>
+    
+                       <div class = "register_headers">
+                           <div class ="register_email">
+                               <h6> Email </h6>
+                           </div>
+                       </div>
+                       <input class ="text_field">
+    
+                       <div class = "register_headers">
+                               <div class ="register_email">
+                                   <h6> Confirm Email </h6>
+                               </div>
+                           </div>
+                           <input class ="text_field">
+    
+                       <div class = "register_headers">
+                               <div class ="register_password">
+                                   <h6> Password </h6>
+                               </div>
+                           </div>
+                           <input class ="text_field">
+    
+                       
+                       <div class = "register_headers">
+                               <div class ="register_password">
+                                   <h6> Confirm Password </h6>
+                               </div>
+                           </div>
+                           <input class ="text_field">
+                       <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-top: 1rem"> Create Account</button>
+    
+                    </div>
+                    <div class ="login_sign_modal_text_fields_container">
+                           <h2> Login</h2>
+       
+                           <div class = "register_headers">
+                               <div class ="register_email">
+                                   <h6> Email </h6>
+                               </div>
+                           </div>
+                           <input class ="text_field">
+                           <div class = "register_headers">
+                                   <div class ="register_password">
+                                       <h6> Password </h6>
+                                   </div>
+                               </div>
+                               <input class ="text_field">
+                               <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-top: 1rem"> Log In</button>
+       
+                        </div>
+                </div>
 </html>
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="scripts/shopping.js"> </script>
+<script src="scripts/signup_modal.js"> </script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 

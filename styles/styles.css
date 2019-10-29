@@ -181,7 +181,7 @@ main {
     justify-content: space-between;
     margin: auto;
     padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid black;
  }
 
  .product_size{
