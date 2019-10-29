@@ -5,14 +5,11 @@ let footer = document.querySelectorAll('footer')
 
 for (i = 0; i < topBar.length; i++){
     topBar[i].innerHTML = 
-        '<div class ="top_bar">' +
         '<ul class = "top_bar_content">'+
-            '<li class ="sign_up_button"> <a href="#">Sign In | Register </a> </li>'+
-            '<li class ="sign_up_button"> <a href="#"> Customer Service </a> </li>'+
-            '<li class ="sign_up_button">'  +
-                '<img class = "currency_flag" src = "../images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>'+
-            '</ul>'+
-        '</div>'     
+        '<button onclick = "showSignUpModal()" class ="sign_in_button"> Sign In / Register </button>'+
+        '<li class ="sign_up_button"> <a href="#"> Customer Service </a> </li>'+
+        '<li class ="sign_up_button"> <img class = "currency_flag" src = "../images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>'+
+        '</ul>'
 }
 
 for (i = 0; i < navBar.length; i++){
@@ -106,3 +103,4 @@ for (i = 0; i < footer.length; i++){
             '</div>'+
         '</div>'
 }
+
