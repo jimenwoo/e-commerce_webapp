@@ -20,7 +20,7 @@ for (i = 0; i < navBar.length; i++){
        ' <div class = "nav_bar">' + 
             '<div class = "nav_items">' +
                     '<ul class="nav justify-content-center">' +
-                        '<li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="../pages/index.html">Home</a></li>' +
+                        '<li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="../index.html">Home</a></li>' +
                         '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/shopping_page.html">Shop</a></li>' +
                         '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/landing_page.html">Locations</a></li> '      +    
                     '</ul> '+
@@ -40,7 +40,7 @@ for (i = 0; i < navBar.length; i++){
                 '</div>'+
             '</div>'+
        ' <ul class = menu_dropdown>' +
-       '<li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="../pages/index.html">Home</a></li>' +
+       '<li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="../index.html">Home</a></li>' +
        '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/shopping_page.html">Shop</a></li>' +
        '<li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="../pages/landing_page.html">Locations</a></li> '      +  
         '</ul>'  +
