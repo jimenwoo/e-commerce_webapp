@@ -1,16 +1,15 @@
-let opened = false
 let shoppingCartObj = []
-let subTotal = 0
-let totalPrice = 0 
+let subTotalPrice = 0
+let totalPrice = 0;
+let taxAmount = 0;
+let totalQuantity = 0;
 let checkoutContainer = document.querySelector('.checkout_products_side_container')
 window.onload = () => {
-    let cartQuantity = document.querySelector('.quantity_shopping_cart')
     let checkoutItemCount = document.querySelector('.qty_items')
         if(sessionStorage.length > 0){
-        checkoutItemCount.innerHTML = sessionStorage.length + ' Items'
-        cartQuantity.innerHTML = cartQuantity.length
-        for(var i = 0; i < sessionStorage.length; i++){
+            for(var i = 0; i < sessionStorage.length; i++){
             shoppingCartObj.push(JSON.parse(sessionStorage.getItem(i)))
+            totalQuantity += parseInt(shoppingCartObj[i].productQuantity)
             var newProduct = document.createElement('div')
             var product = JSON.parse(sessionStorage.getItem(i))
             let price = '$' + product.productValue * product.productQuantity + '.00'
@@ -44,7 +43,7 @@ window.onload = () => {
             checkoutContainer.appendChild(newProduct)
             priceCalculator()
         }
-        
+        checkoutItemCount.innerHTML = totalQuantity + ' Items'
     }
 }
 
@@ -62,12 +61,16 @@ document.querySelector('.nav_bar_sandwich')
         });
 
 let updateShoppingCartQuantity = () =>{
+    let totalQuantity= 0;
     let cartQuantity = document.querySelector('.quantity_shopping_cart')
-    if(sessionStorage.length == 0 ){
+    if(shoppingCartObj.length == 0 ){
         cartQuantity.innerHTML = ''
     }
     else{
-        cartQuantity.innerHTML = sessionStorage.length
+        for(var i = 0; i <shoppingCartObj.length; i++){
+            totalQuantity += parseInt(shoppingCartObj[i].productQuantity)
+        }
+        cartQuantity.innerHTML = totalQuantity
     }
 }
 
@@ -117,38 +120,39 @@ let shoppingCart = () =>{
             checkoutContainer.appendChild(newProduct)
             priceCalculator()
         }
-        if(shoppingCartObj.length == 0){
-            let subtotal = document.querySelector('.checkout_subtotal_val')
-            let total = document.querySelector('.checkout_total_number_val')
-            subtotal.innerHTML = '$0.00'
-            total.innerHTML = '$0.00'
-        }
         let checkoutItemCount = document.querySelector('.qty_items')
         checkoutItemCount.innerHTML = sessionStorage.length + ' Items'
         updateShoppingCartQuantity()
-
+        priceCalculator()
 }
     
 
 let priceCalculator = () => {
     let subtotal = document.querySelector('.checkout_subtotal_val')
     let total = document.querySelector('.checkout_total_number_val')
-
+    let tax = document.querySelector('.checkout_tax_val')
+    let shipping = document.querySelector('.checkout_shipping_val')
     if(shoppingCartObj.length == 0){
         totalPrice = 0;
-        subTotal = 0;
-        subtotal.innerHTML = '$' + subTotal + '.00'
+        subTotalPrice = 0;
+        taxAmount = 0;
+        subtotal.innerHTML = '$' + subTotalPrice + '.00'
         total.innerHTML = "$" + totalPrice + '.00'
+        tax.innerHTML = '$' + taxAmount + '.00' 
+        shipping.innerHTML = "$0.00"
     }
     else{
     for (var i = 0; i < shoppingCartObj.length; i++){
         let productTotal = parseInt(shoppingCartObj[i].productValue) * parseInt(shoppingCartObj[i].productQuantity)
-        subTotal += productTotal
+        subTotalPrice += productTotal
     }  
-        totalPrice = subTotal + 20 
-        subtotal.innerHTML = '$' + subTotal + '.00'
+        taxAmount = Math.round(subTotalPrice*0.09)
+        totalPrice = subTotalPrice + 5 + taxAmount
+        tax.innerHTML = '$' + taxAmount + '.00' 
+        subtotal.innerHTML = '$' + subTotalPrice + '.00'
         total.innerHTML = "$" + totalPrice + '.00'
-        subTotal = 0;
+        shipping.innerHTML = "$" + 5 + '.00'
+        subTotalPrice = 0;
         total = 0;
     }
  }

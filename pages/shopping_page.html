@@ -233,10 +233,6 @@
                 </div>
 
                 <div class = "right_modal">
-                    <button type="button" onclick="closeModal()" id ="deleteFromCart" class="close" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-
                     <div class ="modal_content_details">
                         <div class ="product_header"> 
                             <div id ="product_title">
@@ -283,7 +279,7 @@
                     </div>
                     </div>
             </div>
-            <div class ="sign_up_modal">
+            <div id ="sign_up_modal">
                     <div class="sign_up_modal_buttons">
                        <div value = "login" class ="sign_up_modal_option" onclick = "signUpModal(this)">
                            <a> Log In</a>
@@ -291,11 +287,6 @@
                         <div value ="register" class ="sign_up_modal_option" onclick = "signUpModal(this)" >
                            <a> Register</a>
                        </div>
-                       <div class ="closeSignUpModalButton">
-                            <button type="button" onclick="closeSignUpModal()" id ="deleteFromCart" class="close" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
                     </div>
     
                     <div class ="register_sign_modal_text_fields_container">
@@ -376,10 +367,10 @@
                                 <p style= "font-weight: bold"> Total: </p>
                             </div>
                             <div class = "right_side_pricing">
-                                <p class = 'pricing_subtotal'>$ 0.00</p>
-                                <p>$10.00</p>
-                                <p>$10.00</p>
-                                <p class = 'pricing_total'> $0.00</p>
+                                    <p class = 'pricing_subtotal'style= "text-align: end;" >$0.00</p>
+                                    <p class = 'pricing_tax' style= "text-align: end;"> $0.00</p>
+                                    <p class = 'pricing_shipping' style= "text-align: end;">$0.00</p>
+                                    <p class = 'pricing_total' style= "text-align: end;">$0.00</p>
 
                             </div>
                         </div>

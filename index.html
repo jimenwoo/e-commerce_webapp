@@ -14,22 +14,30 @@
                     <button onclick = "showSignUpModal()" class ="sign_in_button"> Sign In / Register </button>
                     <li class ="sign_up_button"> <a href="#"> Customer Service </a> </li>
                     <li class ="sign_up_button"> <img class = "currency_flag" src = "images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>
-                    </ul>'
+                    </ul>
             </div>     
                 <header>
                         <div class = "nav_bar"> 
                                 <div class = "nav_items"> 
-                                        <ul class="nav justify-content-center"> 
-                                            <li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="index.html">Home</a></li> 
-                                            <li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="pages/shopping_page.html">Shop</a></li> 
-                                            <li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="pages/landing_page.html">Locations</a></li>           
-                                        </ul> 
+                                        <ul class="nav justify-content-center">
+                                                <li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="index.html">Home</a></li>
+                                                <li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="pages/shopping_page.html">Shop</a></li>
+                                                <li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="pages/landing_page.html">Locations</a></li>   
+                                            </ul> 
                                 </div>
                                 <div class ="nav_bar_sandwich"> 
                                     <div class = "hamburger_part"></div>
                                     <div class = "hamburger_part"></div>
                                     <div class = "hamburger_part"></div>
                                 </div>
+                                <div class = "menu_dropdown"> 
+                                        <ul class="nav justify-content-center" style = "display:flex; flex-direction: column"> 
+                                                <li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="index.html">Home</a></li> 
+                                                <li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="pages/shopping_page.html">Shop</a></li> 
+                                                <li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="pages/landing_page.html">Locations</a></li>           
+                                            </ul>
+
+                                </div> 
                                  <div class = "nav_title"> 
                                 <image class = "logo" src = "images/background/logo.png"></img> 
                                 </div> 
@@ -39,11 +47,7 @@
                                     <h4 class = "quantity_shopping_cart">  </h4>
                                     <div>
                                 </div>
-                            <ul class = menu_dropdown> 
-                           <li class="nav-item"><a class="nav-link active"  style="color: #4c4c4b" href="index.html">Home</a></li> 
-                           <li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="pages/shopping_page.html">Shop</a></li> 
-                           <li class="nav-item"><a class="nav-link" style="color: #4c4c4b" href="pages/landing_page.html">Locations</a></li>         
-                            </ul>  
+
                         </div>
                     
     </header>
@@ -91,7 +95,7 @@
           </div>
           </div>
       </main>
-      <div class ="sign_up_modal">
+      <div id ="sign_up_modal">
             <div class="sign_up_modal_buttons">
                <div value = "login" class ="sign_up_modal_option" onclick = "signUpModal(this)">
                    <a> Log In</a>
@@ -99,11 +103,6 @@
                 <div value ="register" class ="sign_up_modal_option" onclick = "signUpModal(this)" >
                    <a> Register</a>
                </div>
-               <div class ="closeSignUpModalButton">
-                    <button type="button" onclick="closeSignUpModal()" id ="deleteFromCart" class="close" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
             </div>
 
             <div class ="register_sign_modal_text_fields_container">
@@ -184,15 +183,15 @@
                       <p> Total: </p>
                   </div>
                   <div class = "right_side_pricing">
-                      <p class = "pricing_subtotal">$ 0.00</p>
-                      <p>$10.00</p>
-                      <p>$10.00</p>
-                      <p class = "pricing_total"> $0.00</p>
+                        <p class = 'pricing_subtotal'style= "text-align: end;" >$0.00</p>
+                        <p class = 'pricing_tax' style= "text-align: end;"> $0.00</p>
+                        <p class = 'pricing_shipping' style= "text-align: end;">$0.00</p>
+                        <p class = 'pricing_total' style= "text-align: end;">$0.00</p>
 
                   </div>
               </div>
               <div class = "modal_button_container">
-                  <button type="button" onclick= 'location.href = "checkout.html"' class="btn btn-secondary btn-lg btn-block"> Checkout Securely</button>
+                  <button type="button" onclick= 'location.href = "pages/checkout.html"' class="btn btn-secondary btn-lg btn-block"> Checkout Securely</button>
               </div>    
               </div>
       </div>  
@@ -254,87 +253,6 @@
                         <h2> Brooklyn Apparel</h2>
                         <p> High Quality Apparel for Less</p>
                     </div>
-                </div>
-
-                          <div class ="sign_up_modal">
-                    <div class="sign_up_modal_buttons">
-                       <div value = "login" class ="sign_up_modal_option" onclick = "signUpModal(this)">
-                           <a> Log In</a>
-                        </div>
-                        <div value ="register" class ="sign_up_modal_option" onclick = "signUpModal(this)" >
-                           <a> Register</a>
-                       </div>
-                       <div class ="closeSignUpModalButton">
-                            <button type="button" onclick="closeSignUpModal()" id ="deleteFromCart" class="close" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                    </div>
-    
-                    <div class ="register_sign_modal_text_fields_container">
-                       <h2> Register</h2>
-                       <div class = "register_name_text_headers">
-                           <div class ="register_name">
-                               <h6> First Name</h6>
-                           </div>
-                           <div class ="register_name">
-                               <h6> Last Name</h6>
-                               </div>
-                       </div>
-                       <div class = "register_name_fields">
-                           <input class ="text_field">
-                           <input class ="text_field">
-                       </div>
-    
-                       <div class = "register_headers">
-                           <div class ="register_email">
-                               <h6> Email </h6>
-                           </div>
-                       </div>
-                       <input class ="text_field">
-    
-                       <div class = "register_headers">
-                               <div class ="register_email">
-                                   <h6> Confirm Email </h6>
-                               </div>
-                           </div>
-                           <input class ="text_field">
-    
-                       <div class = "register_headers">
-                               <div class ="register_password">
-                                   <h6> Password </h6>
-                               </div>
-                           </div>
-                           <input class ="text_field">
-    
-                       
-                       <div class = "register_headers">
-                               <div class ="register_password">
-                                   <h6> Confirm Password </h6>
-                               </div>
-                           </div>
-                           <input class ="text_field">
-                       <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-top: 1rem"> Create Account</button>
-    
-                    </div>
-                    <div class ="login_sign_modal_text_fields_container">
-                           <h2> Login</h2>
-       
-                           <div class = "register_headers">
-                               <div class ="register_email">
-                                   <h6> Email </h6>
-                               </div>
-                           </div>
-                           <input class ="text_field">
-                           <div class = "register_headers">
-                                   <div class ="register_password">
-                                       <h6> Password </h6>
-                                   </div>
-                               </div>
-                               <input class ="text_field">
-                               <button type="button" class="btn btn-secondary btn-lg btn-block" style="margin-top: 1rem"> Log In</button>
-       
-                        </div>
                 </div>
 </html>
 

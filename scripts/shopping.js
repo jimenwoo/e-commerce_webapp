@@ -1,14 +1,15 @@
-let background = document.querySelectorAll("main, header, footer, div.top_bar")
+let background = document.querySelectorAll("#main_container, header, footer, div.top_bar")
 let modalContent = document.querySelector("#modal_content")
 let shoppingCartContainer = document.querySelector('#shopping_cart_products_container')
 
-let opened = false
+let shoppingModalOpened = false;
 let cartToggled = false;
 let shoppingCartObj = []
 let price;
 let size;
 let subTotal = 0
 let totalPrice = 0;
+let taxAmount = 0;
 
 document.querySelector('.nav_bar_sandwich')
         .addEventListener('click', function (event) {
@@ -47,19 +48,19 @@ let addToCart = (e) =>{
     document.getElementById('modal_picture').src = e.children[0].src
     document.getElementById('quantity_val').value = '1'
     modalContent.style.display = "block";
+    shoppingModalOpened = true;
 }
 
 //closing product Modal Screen
 let closeModal = () => {
     err = document.querySelector(".sizing_error")
-
-    modalContent.style.display = "none";
     for(i = 0; i < background.length; i++){
         background[i].style.opacity = '1';
         background[i].style.pointerEvents = 'auto';
     }
     document.querySelector('body').style.overflow = 'scroll'
     err.style.display = 'none';
+    shoppingModalOpened = false;
     
 }
 
@@ -105,28 +106,25 @@ let submitButton = () => {
 //toggling shopping cart side bar
 let toggleCart = () =>{
     let cartView = document.getElementById('main_container')
-
     let shoppingCart = document.querySelector('#shopping_cart_side_bar')
-    if(cartToggled){
-        shoppingCart.style.display = 'none'
-        cartView.style.right = "0"
-        cartView.style.opacity = '1';
-        cartView.style.pointerEvents = 'auto';
-        document.querySelector('body').style.overflow = 'auto'
-    }
-    else if (!cartToggled){
-        shoppingCart.style.display = 'block'
-        cartView.style.opacity = '0.2';
-        cartView.style.pointerEvents = 'none';
-        document.querySelector('body').style.overflow = 'hidden'
-        $("#main_container").animate({right: '275px'});
-        
-    
 
-    }
-    cartToggled = !cartToggled
+    shoppingCart.style.display = 'block'
+    cartView.style.opacity = '0.2';
+    cartView.style.pointerEvents = 'none';
+    document.querySelector('body').style.overflow = 'hidden'
+    cartToggled = true;
 }
 
+let closeCart = () => {
+    let cartView = document.getElementById('main_container')
+    let shoppingCart = document.querySelector('#shopping_cart_side_bar')
+    shoppingCart.style.display = 'none'
+    cartView.style.right = "0"
+    cartView.style.opacity = '1';
+    cartView.style.pointerEvents = 'auto';
+    document.querySelector('body').style.overflow = 'auto'
+    cartToggled= false;
+}
 //populates shopping cart view
 let shoppingCart = () => {
     shoppingCartContainer.innerHTML = ''
@@ -176,21 +174,32 @@ let shoppingCart = () => {
 let priceCalculator = () => {
     let subtotal = document.querySelector('.pricing_subtotal')
     let total = document.querySelector('.pricing_total')
-
+    let tax = document.querySelector('.pricing_tax')
+    let shipping = document.querySelector('.pricing_shipping')
+    let sizes = document.querySelectorAll('.product_size')
+    for(i = 0; i <sizes.length; i++){
+        sizes[i].children[0].style.boxShadow = 'none'
+    }
     if(shoppingCartObj.length == 0){
         totalPrice = 0;
         subTotal = 0;
+        taxAmount = 0;
         subtotal.innerHTML = '$' + subTotal + '.00'
         total.innerHTML = "$" + totalPrice + '.00'
+        tax.innerHTML = '$' + taxAmount + '.00' 
+        shipping.innerHTML = "$0.00"
     }
     else{
     for (var i = 0; i < shoppingCartObj.length; i++){
         let productTotal = parseInt(shoppingCartObj[i].productValue) * parseInt(shoppingCartObj[i].productQuantity)
         subTotal += productTotal
     }  
-        totalPrice = subTotal + 20 
+        taxAmount = Math.round(subTotal*0.09)
+        totalPrice = subTotal + 5 + taxAmount
+        tax.innerHTML = '$' + taxAmount + '.00' 
         subtotal.innerHTML = '$' + subTotal + '.00'
         total.innerHTML = "$" + totalPrice + '.00'
+        shipping.innerHTML = "$" + 5 + '.00'
         subTotal = 0;
         total = 0;
     }
@@ -246,8 +255,6 @@ let removeQtyProduct = (e) => {
     let cartQuantity = document.querySelector('.quantity_shopping_cart')
         if(sessionStorage.length > 0){
         cartQuantity.innerHTML = cartQuantity.length
-
-        let cartQuantity2 = document.querySelector('.quantity_shopping_cart')
         for(var i = 0; i < sessionStorage.length; i++){
             shoppingCartObj.push(JSON.parse(sessionStorage.getItem(i)))
             var newProduct = document.createElement('div')
@@ -285,4 +292,25 @@ let removeQtyProduct = (e) => {
             priceCalculator()
         }
     }
+    
 }
+
+
+$(document).mouseup(function(e){
+    var modal = $('#modal_content');
+    var cart = $('#shopping_cart_side_bar')
+    var signInRegisterButton = $('')
+    if(shoppingModalOpened){
+        if(!modal.is(e.target) && modal.has(e.target).length === 0){
+            modal.hide();
+            closeModal()
+        }
+    }
+    if(cartToggled){
+        if(!cart.is(e.target) && cart.has(e.target).length === 0){
+            cart.hide();
+            closeCart()
+        }
+    }
+
+})
