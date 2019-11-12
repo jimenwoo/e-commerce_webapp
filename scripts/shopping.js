@@ -10,7 +10,7 @@ let size;
 let subTotal = 0
 let totalPrice = 0;
 let taxAmount = 0;
-
+let opened = false;
 document.querySelector('.nav_bar_sandwich')
         .addEventListener('click', function (event) {
             let dropdownMenu = document.querySelector('.menu_dropdown')
