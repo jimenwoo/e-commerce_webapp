@@ -8,7 +8,7 @@ for (i = 0; i < topBar.length; i++){
         '<ul class = "top_bar_content">'+
         '<button onclick = "showSignUpModal()" class ="sign_in_button"> Sign In / Register </button>'+
         '<button onclick = "location.href=' + "'contact_us.html'" + '"class ="sign_in_button"> Customer Service </button>'+
-        '<li class ="sign_up_button"> <img class = "currency_flag" src = "../images/social_media_icons/flag_US.svg" style = "width: 24px; height: 24px"> USD </li>'+
+        '<li class ="sign_up_button"> <img class = "currency_flag" src = "../images/social_media_icons/flag_US.svg" alt = "" style = "width: 24px; height: 24px"> USD </li>'+
         '</ul>'
 }
 
@@ -28,10 +28,10 @@ for (i = 0; i < navBar.length; i++){
                 '<div class = "hamburger_part"></div>'+
             '</div>'+
             ' <div class = "nav_title">' +
-            '<image class = "logo" src = "../images/background/logo.png"></img>' + 
+            '<image class = "logo" src = "../images/background/logo.png" alt = ""></img>' + 
             '</div>' +
             '<div class = "nav_shopping_cart">' +
-                '<img class = "shopping_cart" onclick = "toggleCart()" src ="../images/social_media_icons/sc.png" height="42" width="42">'+
+                '<img class = "shopping_cart" onclick = "toggleCart()" src ="../images/social_media_icons/sc.png" alt = "" height="42" width="42">'+
                 '<div class = "nav_shopping_cart_quantity">'+
                 '<h4 class = "quantity_shopping_cart">  </h4>'+
                 '</div>'+
@@ -99,7 +99,7 @@ for (i = 0; i < footer.length; i++){
               '  </div> ' +
             '</div>' + 
             '<div class = "footer_bot">'+
-                '<image class = "logo" style = "max-width: 75px; max-height: 75px" src = "../images/background/logo2.png"></img>' + 
+                '<image class = "logo" style = "max-width: 75px; max-height: 75px" alt = "" src = "../images/background/logo2.png"></img>' + 
                 '<h2> Brooklyn Apparel</h2>'+
                 '<p> High Quality Apparel for Less</p>'+
             '</div>'+

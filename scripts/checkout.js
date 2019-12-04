@@ -17,7 +17,7 @@ window.onload = () => {
                 '<div class = "checkout_product_card">'+
                 '<div class = "checkout_product_img_description">'+
                     '<div class = "checkout_product_img_container">'+
-                        '<img id = "checkout_product_image" src="' + product.productURL + '">'+
+                        '<img id = "checkout_product_image" src="' + product.productURL + '" alt = "" >'+
                     '</div>'+
                     '<div class = "checkout_product_description">'+
                         '<p class = "product_description_title">' +
@@ -92,7 +92,7 @@ let shoppingCart = () =>{
                 '<div class = "checkout_product_card">'+
                 '<div class = "checkout_product_img_description">'+
                     '<div class = "checkout_product_img_container">'+
-                        '<img id = "checkout_product_image" src="' + product.productURL + '">'+
+                        '<img id = "checkout_product_image" src="' + product.productURL + '" alt = "">'+
                     '</div>'+
                     '<div class = "checkout_product_description">'+
                         '<p class = "product_description_title">' +

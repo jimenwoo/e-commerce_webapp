@@ -140,7 +140,7 @@ let shoppingCart = () => {
         '<div class = shopping_cart_product_picture>'+
             '<div class ="deleteButton">'+
                 '</div>'+
-            '<img id = "shopping_cart_product_picture_image" src= "' + product.productURL +  '"' + '>' +
+            '<img id = "shopping_cart_product_picture_image" src= "' + product.productURL +  '"' + ' alt = "">' +
         '</div>'+
         '<div class = "shopping_cart_product_details"> '+
             '<div class ="shopping_cart_product_header"> '+
@@ -265,7 +265,7 @@ let removeQtyProduct = (e) => {
             '<div class = shopping_cart_product_picture>'+
                 '<div class ="deleteButton">'+
                     '</div>'+
-                '<img id = "shopping_cart_product_picture_image" src= "' + product.productURL +  '"' + '>' +
+                '<img id = "shopping_cart_product_picture_image" src= "' + product.productURL +  '"' + 'alt = "">' +
             '</div>'+
             '<div class = "shopping_cart_product_details"> '+
                 '<div class ="shopping_cart_product_header"> '+
